@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/split.py" beforeDir="false" afterPath="$PROJECT_DIR$/split.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/split.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+            <state relative-caret-position="297">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -99,7 +98,7 @@
       <updated>1556086984393</updated>
       <workItem from="1556086986560" duration="879000" />
       <workItem from="1556089642941" duration="831000" />
-      <workItem from="1556090509495" duration="3226000" />
+      <workItem from="1556090509495" duration="4004000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1556090113607</created>
@@ -129,11 +128,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556096281433</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="split data">
+      <created>1556102076926</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556102076926</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4936000" />
+    <option name="totallyTimeSpent" value="5714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
@@ -181,7 +187,8 @@
     <MESSAGE value="hello world" />
     <MESSAGE value="ra&amp;dec split" />
     <MESSAGE value="debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <MESSAGE value="split data" />
+    <option name="LAST_COMMIT_MESSAGE" value="split data" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -210,8 +217,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/split.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        <state relative-caret-position="297">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
