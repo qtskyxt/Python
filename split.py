@@ -1,7 +1,8 @@
 pwd='/home/tian.qiu/catalog/'
 HSC=open(pwd+'213641.csv','r')
 lines=HSC.readlines()
-names=lines[0].split(',')
+names=lines[0].replace('\n','')
+names=names.split(',')
 files=[]
 for i in range(len(names)):
     files.append(open(pwd+'result/'+names[i]+'.txt','w'))
