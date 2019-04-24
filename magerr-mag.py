@@ -15,6 +15,7 @@ m1=min(magdata)
 m2=max(magdata)
 m=(m2-m1)/5
 nmag=[m1,m1+m,m1+2*m,m1+3*m,m1+4*m,m2]
+print(nmag)
 
 #sorted(data,key=lambda x:x[0])
 #data2=[data[i:i+math.ceil(len(data)/5)] for i in range(0,len(data),math.ceil(len(data)/5))]
@@ -22,8 +23,10 @@ nmag=[m1,m1+m,m1+2*m,m1+3*m,m1+4*m,m2]
 #按 error 的取值分成 6 段区间
 e1=min(magerrdata)
 e2=max(magerrdata)
-e=(e2-e1)/6
-nerr=[e1,e1+e,e1+2*e,e1+3*e,e1+4*e,e1+5*e,e2]
+e=pow((e2/e1),1/6)
+nerr=[e1,e1*e,e1*e*e,e1*e*e*e,e2/e/e,e2/e,e2]
+print(e1,e2)
+print(nerr)
 
 #对每一段区间不同光度的 star 个数进行计数 n[i][j] 表示第 i 段光度中，第 j 段 err 的个数
 '''
@@ -68,6 +71,7 @@ for i in range(7):
 	nerrl[i]=round(nerr[i],7)
 plt.xticks([-0.1,0.9,1.9,2.9,3.9,4.9,5.9],nerrl )
 plt.ylabel('N')
+plt.yscale('log')
 
 #画图
 for i in range(5):
