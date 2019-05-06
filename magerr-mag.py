@@ -1,3 +1,5 @@
+#横轴为 error 纵轴为 star 个数，不同颜色代表不同的光度区间 并排每个 gram
+
 import numpy as np
 import matplotlib.pyplot as plt
 import math
