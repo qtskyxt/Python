@@ -15,8 +15,8 @@ S82=np.loadtxt(pwd+'S82coaddStars.dat',usecols=(0,1,6,11))
 S82=np.insert(S82,0,range(S82.shape[0]),axis=1)
 
 #创建切片的数组，切片总数据为 360 份，根据 ra 每度为一份，加快运行,再根据亮度分成 13-25每 2 度一份，6 份
-HSCs=[[[] for i in range(360)] for j in range(6)]
-S82s=[[[] for i in range(360)] for j in range(6)]
+HSCs=[[[] for i in range(6)] for j in range(360)]
+S82s=[[[] for i in range(6)] for j in range(360)]
 for i in range(HSC.shape[0]):
 	HSCs[int(HSC[i][1])][int((HSC[i][3]-13)/2)].append(HSC[i])
 for i in range(S82.shape[0]):
