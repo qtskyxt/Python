@@ -8,7 +8,7 @@ pwd='/home/tian.qiu/catalog/'
 HSC=np.loadtxt(pwd+'213641.csv',usecols=(0,1),delimiter=',')
 HSC=np.insert(HSC,0,range(HSC.shape[0]),axis=1)
 
-match=np.loadtxt(pwd+'match1s.txt')
+match=np.loadtxt(pwd+'match1s.txt',usecols=(0,1))
 unmatch=[]
 for i in range(len(match)):
     if match[i][1]==0:
