@@ -4,11 +4,12 @@ import numpy as np
 
 
 pwd='/home/tian.qiu/catalog/'
-HSC=np.loadtxt(pwd+'213641.csv',usecols=(0))
+HSC=np.loadtxt(pwd+'213641.csv',usecols=(0),delimiter=',')
 HSCl=open(pwd+'213641.csv','r')
-HSCl.readline()
+t=HSCl.readline()
 S82=np.loadtxt(pwd+'S82coaddStars.dat',usecols=(0))
 cut=open(pwd+'cutHSC','w')#用来储存 cut 后的 catalog
+cut.write(t)
 
 #寻找 S82 中 ra 的范围
 a=int(S82[0])
@@ -35,11 +36,9 @@ b[1].append(a+n)
 for i in range(len(HSC)):
     t=HSCl.readline()
     for j in range(len(b[0])):
-        if HSC[i]>=b[0][j] and HSC<=b[1][j]:
+        if HSC[i]>=b[0][j] and HSC[i]<=b[1][j]:
             cut.write(t)
             break
-        else:
-            continue
 cut.close()
 
 
