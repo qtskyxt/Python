@@ -18,14 +18,14 @@ S82=np.insert(S82,0,range(S82.shape[0]),axis=1)
 HSCs=[[[] for i in range(360)] for j in range(6)]
 S82s=[[[] for i in range(360)] for j in range(6)]
 for i in range(HSC.shape[0]):
-    HSCs[int(HSC[i][1])][int((HSC[i][3]-13)/2)].append(HSC[i])
+	HSCs[int(HSC[i][1])][int((HSC[i][3]-13)/2)].append(HSC[i])
 for i in range(S82.shape[0]):
-    S82s[int(S82[i][1])][int((S82[i][3]-13)/2)].append(S82[i])
+	S82s[int(S82[i][1])][int((S82[i][3]-13)/2)].append(S82[i])
 
 #定义函数，判断两者是否在 1 角秒的范围内，返回 T or F
-def dis(i,j,k):
-	a=SkyCoord(HSCs[k][i][1],HSCs[k][i][2],unit='deg')
-	b=SkyCoord(S82s[k][j][1],S82s[k][j][2],unit='deg')
+def dis(i,j,k,m):
+	a=SkyCoord(HSCs[k][m][i][1],HSCs[k][m][i][2],unit='deg')
+	b=SkyCoord(S82s[k][m][j][1],S82s[k][m][j][2],unit='deg')
 	c=a.separation(b)
 	if c.arcsec <=1:
 		return True
@@ -47,14 +47,14 @@ match=open(pwd+'match1s_aspy.txt','w')
 #根据HSC每一行的目标寻找匹配的Stripe82中的目标
 for k in range(360):
 	for m in range(6):
-	for i in range(len(HSCs[k])):
-		match.write(str(int(HSCs[k][i][0]))+' ')
-		n=0
-		for j in range(len(S82s[k])):
-			if dis(i,j,k):
-				n=n+1
-				match.write(str(int(S82s[k][j][0]))+' ')
-		match.write(str(n)+'\n')
+		for i in range(len(HSCs[k][m])):
+			match.write(str(int(HSCs[k][m][i][0]))+' ')
+			n=0
+			for j in range(len(S82s[k][m])):
+				if dis(i,j,k,m):
+					n=n+1
+					match.write(str(int(S82s[k][m][j][0]))+' ')
+			match.write(str(n)+'\n')
 match.close()
 
 
