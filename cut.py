@@ -38,7 +38,7 @@ for i in range(len(HSC)):
         if HSC[i]>=b[0][j] and HSC<=b[1][j]:
             cut.write(t)
             break
-        else
+        else:
             continue
 cut.close()
 
