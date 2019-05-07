@@ -27,7 +27,7 @@ def dis(i,j,k):
 	a=SkyCoord(HSCs[k][i][1],HSCs[k][i][2],unit='deg')
 	b=SkyCoord(S82s[k][j][1],S82s[k][j][2],unit='deg')
 	c=a.separation(b)
-	if c.acrsec <=1:
+	if c.arcsec <=1:
 		return True
 	else:
 		return False
