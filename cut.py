@@ -23,8 +23,8 @@ for i in range(len(S82)):
             continue
         else:
             print(a,a+n-1)
-			b[0].append(a)
-			b[1].append(a+n-1)
+            b[0].append(a)
+            b[1].append(a+n-1)
             a=int(S82[i])
             n=1
 print(a,a+n)
@@ -33,15 +33,13 @@ b[1].append(a+n)
 
 #判断HSC中的数据是否在上述的范围内，在则存在新catalog 中
 for i in range(len(HSC)):
-	t=HSCl.readline()
-	for j in range(len(b[0])):
-		if HSC[i]>=b[0][j] and HSC<=b[1][j]:
-			cut.write(t)
-			break
-		else
-			continue
+    t=HSCl.readline()
+    for j in range(len(b[0])):
+        if HSC[i]>=b[0][j] and HSC<=b[1][j]:
+            cut.write(t)
+            break
+        else
+            continue
 cut.close()
-
-	
 
 
