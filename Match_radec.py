@@ -1,8 +1,8 @@
 #match HSC 与 Stripe82 中的相同 star，匹配后转移到另一个文件中
 
 import numpy as np
+from astropy.coordinates import SkyCoord  #利用 astropy内置函数加快计算
 
-PI=3.14159265
 
 pwd='/home/tian.qiu/catalog/'
 
@@ -24,15 +24,25 @@ for i in range(S82.shape[0]):
 
 #定义函数，判断两者是否在 1 角秒的范围内，返回 T or F
 def dis(i,j,k):
+	a=SkyCoord(HSCs[k][i][1],HSCs[k][i][2],unit='deg')
+	b=SkyCoord(S82s[k][j][1],S82s[k][j][2],unit='deg')
+	c=a.separation(b)
+	if c.acrsec <=1:
+		return True
+	else:
+		return False
+
+'''
     d2 = (HSCs[k][i][1] - S82s[k][j][1]) ** 2 + (HSCs[k][i][2] - S82s[k][j][2]) ** 2
     # 距离小于 1 角秒，1/3600
     if d2 <= (1/3600)**2:
         return True
     else:
         return False
+'''
 
 #创建记录文件，记录匹配的总数和编号
-match=open(pwd+'match1s.txt','w')
+match=open(pwd+'match1s_aspy.txt','w')
 
 #根据HSC每一行的目标寻找匹配的Stripe82中的目标
 for k in range(360):
