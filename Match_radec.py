@@ -7,7 +7,7 @@ from astropy.coordinates import SkyCoord  #利用 astropy内置函数加快计�
 pwd='/home/tian.qiu/catalog/'
 
 #读取 HSC 数据，1ra 2dec 3-6g,r,i,z 7-10g,r,i,z err 0增加编码 先只读取位置和 r,i re,ie
-HSC=np.loadtxt(pwd+'213641.csv',usecols=(0,1,4,8),delimiter=',')
+HSC=np.loadtxt(pwd+'cutHSC',usecols=(0,1,4,8),delimiter=',')
 HSC=np.insert(HSC,0,range(HSC.shape[0]),axis=1)
 
 #读取 S82 数据，1ra 2dec 3rExt 4-8u,g,r,i,z 9-13u,g,r,i,z err 0 增加编码 
