@@ -17,7 +17,7 @@ for i in range(len(match)):
 unmatch=np.array(unmatch)
 
 plt.figure(figsize=(8,6),dpi=300)
-plt.scatter(unmatch[:,0],unmatch[:,1])
+plt.scatter(unmatch[:,0],unmatch[:,1],s=1)
 plt.xlabel('ra')
 plt.ylabel('dec')
 plt.title('dec vs ra distribution')
