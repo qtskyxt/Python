@@ -25,8 +25,8 @@ for i in range(S82.shape[0]):
 #定义函数，判断两者是否在 1 角秒的范围内，返回 T or F
 def dis(i,j,k):
     d2 = (HSCs[k][i][1] - S82s[k][j][1]) ** 2 + (HSCs[k][i][2] - S82s[k][j][2]) ** 2
-    # 距离小于 1 角秒，pi/180/3600
-    if d2 <= (PI / 180 / 3600)**2:
+    # 距离小于 1 角秒，1/3600
+    if d2 <= (1/3600)**2:
         return True
     else:
         return False
