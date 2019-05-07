@@ -12,7 +12,7 @@ match=np.loadtxt(pwd+'match1s.txt',usecols=(0,1))
 unmatch=[]
 for i in range(len(match)):
     if match[i][1]==0:
-        unmatch.append([HSC[int(match[i][0])][0],HSC[int(match[i][0])][1]])
+        unmatch.append([HSC[int(match[i][0])][1],HSC[int(match[i][0])][2]])
 
 unmatch=np.array(unmatch)
 
