@@ -42,7 +42,7 @@ def dis(i,j,k,m):
 '''
 
 #创建记录文件，记录匹配的总数和编号
-match=open(pwd+'match1s_aspy.txt','w')
+match=open(pwd+'match1s_aspy_mag.txt','w')
 
 #根据HSC每一行的目标寻找匹配的Stripe82中的目标
 for k in range(360):
