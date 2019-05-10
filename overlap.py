@@ -32,10 +32,14 @@ S82s=np.array(S82s)
 #find out the overlapped dec range for each ra degree
 radec=[[] for i in range(360)]#to store the range
 for i in range(360):
-    decmax=min(max(HSCs[:,1]),max(S82s[:,1]))
-    decmin=max(min(HSCs[:,1]),min(S82s[:,1]))
-    radec[i].append(decmin)
-    radec[i].append(decmax)
+	a=max(HSCs[i][:,1])
+	b=max(S82s[i][:,1])
+	decmax=min(a,b)
+	a=min(HSCs[i][:,1])
+	b=min(S82s[i][:,1])
+	decmin=max(a,b)
+	radec[i].append(decmin)
+	radec[i].append(decmax)
 
 
 #判断HSC中的数据是否在上述的范围内，在则存在新catalog 中
