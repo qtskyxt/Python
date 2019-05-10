@@ -45,15 +45,17 @@ for i in range(360):
 #判断HSC中的数据是否在上述的范围内，在则存在新catalog 中
 for i in range(len(HSCl)):
     ra=int(HSC[i][0])
-    if radec[ra]!=[] and ra<=radec[ra][1] and ra>=radec[ra][0]:
-        t = HSCl[i]
-        olHSC.write(t)
+    dec=HSC[i][1]
+    if radec[ra]!=[] and dec<=radec[ra][1] and dec>=radec[ra][0]:
+        x = HSCl[i]
+        olHSC.write(x)
 
 olHSC.close()
 
 for i in range(len(S82l)):
     ra=int(S82[i][0])
-    if radec[ra]!=[] and ra<=radec[ra][1] and ra>=radec[ra][0]:
+    dec=S82[i][1]
+    if radec[ra]!=[] and dec<=radec[ra][1] and dec>=radec[ra][0]:
         x = S82l[i]
         olS82.write(x)
 

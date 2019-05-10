@@ -26,17 +26,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/overlap.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="876">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -148,6 +138,9 @@
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -192,7 +185,8 @@
       <workItem from="1557211574960" duration="476000" />
       <workItem from="1557214058554" duration="68000" />
       <workItem from="1557245889058" duration="182000" />
-      <workItem from="1557280576237" duration="18684000" />
+      <workItem from="1557280576237" duration="18947000" />
+      <workItem from="1557506746980" duration="510000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1556090113607</created>
@@ -404,15 +398,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557503740796</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="overlap final edition">
+      <created>1557506401357</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1557506401357</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68491000" />
+    <option name="totallyTimeSpent" value="69264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.32673267" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -503,7 +503,8 @@
     <MESSAGE value="overlap 1st edition" />
     <MESSAGE value="overlap 2st edition" />
     <MESSAGE value="overlap fix bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="overlap fix bugs" />
+    <MESSAGE value="overlap final edition" />
+    <option name="LAST_COMMIT_MESSAGE" value="overlap final edition" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -598,8 +599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/overlap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="876">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="999">
+          <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
         </state>
       </provider>
     </entry>
