@@ -3,16 +3,14 @@
 import numpy as np
 
 pwd1='/home/tian.qiu/data/catalog/'
-HSC=open(pwd1+'224959.csv','r')
-HSCl=HSC
-HSC.readline()
+HSC=np.loadtxt(pwd1+'224959.csv',usecols=(0,1),delimiter=',')
+HSCl=open(pwd1+'224959.csv','r')
 t=HSCl.readline()
 olHSC=open(pwd1+'olHSC','w')#overlapped HSC catalog
 olHSC.write(t)
 
-S82=open(pwd1+'S82coaddStars.dat','r')
-S82l=S82
-S82.readline()
+S82=np.loadtxt(pwd1+'S82coaddStars.dat',usecols=(0,1))
+S82l=open(pwd1+'S82coaddStars.dat','r')
 t=S82l.readline()
 olS82=open(pwd1+'olS82','w')#overlapped S82 catalog
 olS82.write(t)
