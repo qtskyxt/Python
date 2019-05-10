@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/overlap.py" beforeDir="false" afterPath="$PROJECT_DIR$/overlap.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/overlap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+            <state relative-caret-position="876">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
@@ -191,7 +192,7 @@
       <workItem from="1557211574960" duration="476000" />
       <workItem from="1557214058554" duration="68000" />
       <workItem from="1557245889058" duration="182000" />
-      <workItem from="1557280576237" duration="15982000" />
+      <workItem from="1557280576237" duration="18684000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1556090113607</created>
@@ -389,17 +390,31 @@
       <option name="project" value="LOCAL" />
       <updated>1557503067525</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="overlap fix bugs">
+      <created>1557503714481</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1557503714481</updated>
+    </task>
+    <task id="LOCAL-00030" summary="overlap fix bugs">
+      <created>1557503740796</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1557503740796</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65789000" />
+    <option name="totallyTimeSpent" value="68491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.32755774" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.32673267" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -487,7 +502,8 @@
     <MESSAGE value="For Match_radec.py  without mag slice and use the new catalog&#10;For Match_radec2.py with mag slice&#10;For overlap.py it is not finished" />
     <MESSAGE value="overlap 1st edition" />
     <MESSAGE value="overlap 2st edition" />
-    <option name="LAST_COMMIT_MESSAGE" value="overlap 2st edition" />
+    <MESSAGE value="overlap fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="overlap fix bugs" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -582,8 +598,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/overlap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        <state relative-caret-position="876">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
