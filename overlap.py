@@ -17,31 +17,40 @@ olS82.write(t)
 
 
 #try to find out overlapped ra range and dec range with each deg of ra.
-ra=[[] for i in range(360)] #to store the overlapped dec for every degree of ra.
-dec=[]
-n=1
-for i in range(len(S82)):
-    if a<=S82[i] and a+n>=S82[i]:
-        continue
-    else:
-        n=n+1
-        if a <= S82[i] and a + n >= S82[i]:
-            continue
-        else:
-            print(a,a+n-1)
-            b[0].append(a)
-            b[1].append(a+n-1)
-            a=int(S82[i])
-            n=1
-print(a,a+n)
-b[0].append(a)
-b[1].append(a+n)
+
+#slice the data into 360 degree
+HSCs=[[] for i in range(360)]
+S82s=[[] for i in range(360)]
+for i in range(HSC.shape[0]):
+    HSCs[int(HSC[i][0])].append(HSC[i])
+for i in range(S82.shape[0]):
+    S82s[int(S82[i][0])].append(S82[i])
+
+HSCs=np.array(HSCs)
+S82s=np.array(S82s)
+
+#find out the overlapped dec range for each ra degree
+radec=[[] for i in range(360)]#to store the range
+for i in range(360):
+    decmax=min(max(HSCs[:,1]),max(S82s[:,1]))
+    decmin=max(min(HSCs[:,1]),min(S82s[:,1]))
+    radec[i].append(decmin)
+    radec[i].append(decmax)
+
 
 #判断HSC中的数据是否在上述的范围内，在则存在新catalog 中
-for i in range(len(HSC)):
+for i in range(len(HSCl)):
     t=HSCl.readline()
-    for j in range(len(b[0])):
-        if HSC[i]>=b[0][j] and HSC[i]<=b[1][j]:
-            cut.write(t)
-            break
-cut.close()
+    ra=int(t[0])
+    if ra<=radec[ra][1] and ra>=radec[ra][0]:
+        olHSC.write(t)
+
+olHSC.close()
+
+for i in range(len(S82l)):
+    t=S82l.readline()
+    ra=int(t[0])
+    if ra<=radec[ra][1] and ra>=radec[ra][0]:
+        olS82.write(t)
+
+olS82.close()
