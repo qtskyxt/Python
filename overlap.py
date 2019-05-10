@@ -23,9 +23,9 @@ olS82.write(t)
 #slice the data into 360 degree
 HSCs=[[] for i in range(360)]
 S82s=[[] for i in range(360)]
-for i in range(HSC.shape[0]):
+for i in range(len(HSC)):
     HSCs[int(HSC[i][0])].append(HSC[i])
-for i in range(S82.shape[0]):
+for i in range(len(S82):
     S82s[int(S82[i][0])].append(S82[i])
 
 HSCs=np.array(HSCs)
