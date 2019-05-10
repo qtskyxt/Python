@@ -25,7 +25,7 @@ HSCs=[[] for i in range(360)]
 S82s=[[] for i in range(360)]
 for i in range(len(HSC)):
     HSCs[int(HSC[i][0])].append(HSC[i])
-for i in range(len(S82):
+for i in range(len(S82)):
     S82s[int(S82[i][0])].append(S82[i])
 
 HSCs=np.array(HSCs)
