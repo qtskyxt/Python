@@ -8,7 +8,7 @@ pwd1='/home/tian.qiu/data/catalog/'
 pwd2='/home/tian.qiu/data/result/'
 
 #读取 HSC 数据，1ra 2dec 3-6g,r,i,z 7-10g,r,i,z err 0增加编码 先只读取位置和 i ,i err
-HSC=np.loadtxt(pwd1+'cutHSC',usecols=(0,1,4,8),delimiter=',')
+HSC=np.loadtxt(pwd1+'224959.csv',usecols=(0,1,4,8),delimiter=',')
 HSC=np.insert(HSC,0,range(HSC.shape[0]),axis=1)
 
 #读取 S82 数据，1ra 2dec 3rExt 4-8u,g,r,i,z 9-13u,g,r,i,z err 0 增加编码 
@@ -54,6 +54,14 @@ match=open(pwd2+'match1s_aspy_mag.txt','w')
 #根据HSC每一行的目标寻找匹配的Stripe82中的目标
 for k in range(360):
 	for m in range(6):
+		if HSCs[k][m] != []:
+			HSCs[k][m] = np.vstack(HSCs[k][m])
+		else:
+			continue
+		if S82s[k][m] != []:
+			S82s[k][m] = np.vstack(S82s[k][m])
+		else:
+			continue
 		for i in range(len(HSCs[k][m])):
 			match.write(str(int(HSCs[k][m][i][0]))+' ')
 			n=0
