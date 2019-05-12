@@ -63,13 +63,13 @@ for k in range(360):
 		else:
 			continue
 		for i in range(len(HSCs[k][m])):
-			match.write(str(int(HSCs[k][m][i][0]))+' ')
+			match.write(str(HSCs[k][m][i][0])+' ')
 			n=0
 			sep=sep_s2m(HSCs[k][m][i][1],HSCs[k][m][i][2],S82s[k][m][:,1],S82s[k][m][:,2])
 			for j in sep:
 				if j<=1:
 					n=n+1
-					match.write(str(int(S82s[k][m][j][0]))+' ')
+					match.write(str(S82s[k][m][j][0])+' ')
 			match.write(str(n)+'\n')
 match.close()
 

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Match_radec2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Match_radec_mag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Match_radec_mag.py" beforeDir="false" afterPath="$PROJECT_DIR$/Match_radec_mag.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Match_radec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="27">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#46#64#0" expanded="true" />
               </folding>
@@ -39,11 +39,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/overlap.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="734">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+            <state relative-caret-position="837">
+              <caret line="71" column="53" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
               <folding>
                 <element signature="e#46#64#0" expanded="true" />
                 <element signature="e#1082#1516#1" />
@@ -95,7 +104,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="1417" />
@@ -222,7 +231,7 @@
       <workItem from="1557214058554" duration="68000" />
       <workItem from="1557245889058" duration="182000" />
       <workItem from="1557280576237" duration="18947000" />
-      <workItem from="1557506746980" duration="5775000" />
+      <workItem from="1557506746980" duration="7373000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1556090113607</created>
@@ -448,17 +457,31 @@
       <option name="project" value="LOCAL" />
       <updated>1557507295364</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Match update with SkyCoord in array 5/12">
+      <created>1557642321715</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1557642321715</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fix bugs">
+      <created>1557644646706</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1557644646706</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74529000" />
+    <option name="totallyTimeSpent" value="76127000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24009901" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24009901" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -537,7 +560,6 @@
     <MESSAGE value="fix arcsec bug" />
     <MESSAGE value="add astropy.coordinates to accelerate calculation" />
     <MESSAGE value="test for the cut off" />
-    <MESSAGE value="fix bugs" />
     <MESSAGE value="mag distribution" />
     <MESSAGE value="ra_dec dist" />
     <MESSAGE value="plot modified" />
@@ -549,7 +571,9 @@
     <MESSAGE value="overlap fix bugs" />
     <MESSAGE value="overlap final edition" />
     <MESSAGE value="overlap final edition (bug fixed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="overlap final edition (bug fixed)" />
+    <MESSAGE value="Match update with SkyCoord in array 5/12" />
+    <MESSAGE value="fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -608,13 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/overlap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mag_distribution.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -634,18 +651,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="27">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="e#46#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/overlap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+        <state relative-caret-position="837">
+          <caret line="71" column="53" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
           <folding>
             <element signature="e#46#64#0" expanded="true" />
             <element signature="e#1082#1516#1" />
