@@ -73,7 +73,7 @@ for i in range(360):
 			n=0
 			matchlist=matchlist.append({'HSCindex':int(HSCs[i].iloc[j].name),'HSCimag':HSCs[i].iloc[j].i_cmodel_mag},ignore_index=True)
 			sep=sep_s2m(HSCs[i].iloc[j].ra,HSCs[i].iloc[j].dec,S82s[i].ra,S82s[i].dec)
-			for k in len(sep):
+			for k in range(len(sep)):
 				if sep[k]<=1:
 					n=n+1
 					matchedS82=matchedS82.append(S82s[i].iloc[k])
