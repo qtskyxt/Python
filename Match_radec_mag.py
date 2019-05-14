@@ -32,13 +32,18 @@ S82s=[[] for i in range(360)]
 for i in range(360):
 	HSCs[i]=HSC[(HSC.ra>=i)&(HSC.ra<i+1)]
 	S82s[i]=S82[(S82.ra>=i)&(S82.ra<i+1)]
-
+'''
 def sep_s2m(Ara,Adec,Bras,Bdecs):
 	s=SkyCoord(Ara,Adec,unit='deg')
 	m=SkyCoord(Bras,Bdecs,unit='deg')
 	sep=s.separation(m)
 	return sep.arcsec
-
+'''
+def sep_s2m(A,Bs):
+	s=SkyCoord(A[0],A[1],unit='deg')
+	m=SkyCoord(Bs[:,0],Bs[:,1],unit='deg')
+	sep=s.separation(m)
+	return sep.arcsec
 '''
 #定义函数，判断两者是否在 1 角秒的范围内，返回 T or F
 def dis(i,j,k,m):
@@ -69,10 +74,13 @@ for i in range(360):
 	if HSCs[i].empty :
 		continue
 	else:
+		As = HSCs[i].values
+		Bs = S82s[i].values
 		for j in range(len(HSCs[i])):
 			n=0
 			matchlist=matchlist.append({'HSCindex':int(HSCs[i].iloc[j].name),'HSCimag':HSCs[i].iloc[j].i_cmodel_mag},ignore_index=True)
-			sep=sep_s2m(HSCs[i].iloc[j].ra,HSCs[i].iloc[j].dec,S82s[i].ra,S82s[i].dec)
+#			sep=sep_s2m(HSCs[i].iloc[j].ra,HSCs[i].iloc[j].dec,S82s[i].ra,S82s[i].dec)
+			sep=sep_s2m(As[j],Bs)
 			for k in range(len(sep)):
 				if sep[k]<=1:
 					n=n+1
@@ -84,6 +92,7 @@ for i in range(360):
 			else:
 				unmatchedHSC=unmatchedHSC.append(HSCs[i].iloc[j])
 			matchlist.loc[j, 'matchednum'] = n
+			print(i,j,n)
 matchedS82=matchedS82.drop_duplicates()
 unmatchedS82=S82.append(matchedS82).drop_duplicates(keep=False)
 
