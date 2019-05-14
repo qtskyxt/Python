@@ -80,9 +80,9 @@ for i in range(360):
 					matchlist.loc[j,'matchedS82index'+str(n)]=int(S82s[i].iloc[k].name)
 					matchlist.loc[j,'S82imag'+str(n)]=S82s[i].iloc[k].iM
 			if n!=0:
-				matchedHSC = matchedHSC.append(HSCs[i].loc[j])
+				matchedHSC = matchedHSC.append(HSCs[i].iloc[j])
 			else:
-				unmatchedHSC=unmatchedHSC.append(HSCs[i].loc[j])
+				unmatchedHSC=unmatchedHSC.append(HSCs[i].iloc[j])
 			matchlist.loc[j, 'matchednum'] = n
 matchedS82=matchedS82.drop_duplicates()
 unmatchedS82=S82.append(matchedS82).drop_duplicates(keep=False)
