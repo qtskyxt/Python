@@ -70,6 +70,7 @@ matchedS82=pd.DataFrame(columns=S82.columns)
 unmatchedHSC=pd.DataFrame(columns=HSC.columns)
 unmatchedS82=pd.DataFrame(columns=S82.columns)
 matchlist=pd.DataFrame(columns=['HSCindex','HSCimag','matchednum'])
+TF=[[] for i in range(360)]
 for i in range(360):
 	if HSCs[i].empty :
 		continue
@@ -77,6 +78,33 @@ for i in range(360):
 		As = HSCs[i].values
 		Bs = S82s[i].values
 		for j in range(len(HSCs[i])):
+			n=0
+			sep = sep_s2m(As[j], Bs)
+			m = sep<=1
+			TF[i].append(m)
+	print(i)
+print('calculation finished' )
+
+for i in range(360):
+	if TF[i]==[]:
+		continue
+	else:
+		for j in range(len(TF[i])):
+			n = 0
+			matchlist = matchlist.append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag}, ignore_index=True)
+			for k in range(len(TF[i][j])):
+				if TF[i][j][k]:
+					n = n + 1
+					matchedS82 = matchedS82.append(S82s[i].iloc[k])
+					matchlist.loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[k].name)
+					matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[k].iM
+			if n != 0:
+				matchedHSC = matchedHSC.append(HSCs[i].iloc[j])
+			else:
+				unmatchedHSC = unmatchedHSC.append(HSCs[i].iloc[j])
+			matchlist.loc[j, 'matchednum'] = n
+	print(i)
+''' too slow to output with pandas during the calculation 
 			n=0
 			matchlist=matchlist.append({'HSCindex':int(HSCs[i].iloc[j].name),'HSCimag':HSCs[i].iloc[j].i_cmodel_mag},ignore_index=True)
 #			sep=sep_s2m(HSCs[i].iloc[j].ra,HSCs[i].iloc[j].dec,S82s[i].ra,S82s[i].dec)
@@ -93,6 +121,7 @@ for i in range(360):
 				unmatchedHSC=unmatchedHSC.append(HSCs[i].iloc[j])
 			matchlist.loc[j, 'matchednum'] = n
 			print(i,j,n)
+'''
 matchedS82=matchedS82.drop_duplicates()
 unmatchedS82=S82.append(matchedS82).drop_duplicates(keep=False)
 
