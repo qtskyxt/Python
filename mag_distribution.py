@@ -1,18 +1,18 @@
 #plot of histogram distribution in terms of the magnitude
 
-import numpy as np
 import matplotlib.pyplot as plt
-
-pwd='/home/tian.qiu/catalog/'
-HSC=np.loadtxt(pwd+'cutHSC',usecols=(0,1,4),delimiter=',')
-S82=np.loadtxt(pwd+'S82coaddStars.dat',usecols=(0,1,6))
+import pandas as pd
+pwd1='/home/tian.qiu/data/catalog/'
+pwd2='/home/tian.qiu/data/plot/'
+HSC=pd.read_csv(pwd1+'olHSC')
+S82=pd.read_csv(pwd1+'olS82',sep='\s+')
 
 plt.figure(figsize=(8,6),dpi=300)
 plt.subplot(111)
-bins1=plt.hist(S82[:,2],bins=20,color='red',label='S82',histtype='step')[1]
-plt.hist(HSC[:,2],bins=bins1,color='blue',label='HSC',histtype='step')
+bins1=plt.hist(S82.iM,bins=20,color='red',label='S82',histtype='step')[1]
+plt.hist(HSC.i_cmodel_mag,bins=bins1,color='blue',label='HSC',histtype='step')
 plt.title('magnitude distribution')
 plt.ylabel('N')
 plt.xlabel('mag')
 plt.legend()
-plt.savefig(pwd+'mag_dist.png')
+plt.savefig(pwd+'mag_dist_ol.png')

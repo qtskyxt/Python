@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/magerrmean-mag.py" beforeDir="false" afterPath="$PROJECT_DIR$/magerrmean-mag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mag_distribution.py" beforeDir="false" afterPath="$PROJECT_DIR$/mag_distribution.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,40 +26,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-366">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#85#103#0" expanded="true" />
-                <element signature="e#757#1044#1" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mag_distribution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="216">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
               <folding>
                 <element signature="e#59#77#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/magerrmean-mag.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#199#430#1" />
               </folding>
             </state>
           </provider>
@@ -89,7 +63,6 @@
         <option value="$PROJECT_DIR$/split.py" />
         <option value="$PROJECT_DIR$/cut.py" />
         <option value="$PROJECT_DIR$/magerr-mag-3.py" />
-        <option value="$PROJECT_DIR$/mag_distribution.py" />
         <option value="$PROJECT_DIR$/ra_dec_distribution.py" />
         <option value="$PROJECT_DIR$/Match_radec2.py" />
         <option value="$PROJECT_DIR$/overlap.py" />
@@ -97,6 +70,7 @@
         <option value="$PROJECT_DIR$/listunmatch.py" />
         <option value="$PROJECT_DIR$/Match_radec_mag.py" />
         <option value="$PROJECT_DIR$/magerrmean-mag.py" />
+        <option value="$PROJECT_DIR$/mag_distribution.py" />
       </list>
     </option>
   </component>
@@ -113,7 +87,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -125,6 +98,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -133,7 +107,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -230,7 +204,7 @@
       <workItem from="1557506746980" duration="13630000" />
       <workItem from="1557721870274" duration="2678000" />
       <workItem from="1557730139086" duration="1731000" />
-      <workItem from="1557882311094" duration="6179000" />
+      <workItem from="1557882311094" duration="6361000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1556090113607</created>
@@ -512,15 +486,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557887635933</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="modified magerrmean-mag with pd.">
+      <created>1557908547192</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1557908547192</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101694000" />
+    <option name="totallyTimeSpent" value="101963000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23891273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -548,6 +528,33 @@
       <window_info anchor="right" id="R Packages" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.32920793" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24009901" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32866043" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32866043" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299373" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32943925" />
+      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="right" x="0" y="0" width="270" height="1217" id="Documentation" order="0" side_tool="true" weight="0.32838285" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.3297568" />
+      <window_info anchor="right" id="R Graphics" order="5" />
+      <window_info anchor="right" id="R Packages" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32920793" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -563,7 +570,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ra&amp;dec split" />
     <MESSAGE value="split data" />
     <MESSAGE value="debug" />
     <MESSAGE value="1" />
@@ -588,7 +594,8 @@
     <MESSAGE value="modified match_radec_mag with pandas and at the meanwhile output the matched and unmatched file and the matchlist" />
     <MESSAGE value="fix bugs" />
     <MESSAGE value="separate the calculation and the output to see if it can be accelerated" />
-    <option name="LAST_COMMIT_MESSAGE" value="separate the calculation and the output to see if it can be accelerated" />
+    <MESSAGE value="modified magerrmean-mag with pd." />
+    <option name="LAST_COMMIT_MESSAGE" value="modified magerrmean-mag with pd." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -659,23 +666,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mag_distribution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#59#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-366">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="1416">
+          <caret line="120" column="52" lean-forward="true" selection-start-line="120" selection-start-column="52" selection-end-line="120" selection-end-column="52" />
           <folding>
             <element signature="e#85#103#0" expanded="true" />
             <element signature="e#757#1044#1" />
+            <element signature="e#1204#1353#1" />
+            <element signature="e#1348#1781#1" />
           </folding>
         </state>
       </provider>
@@ -687,6 +686,16 @@
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#199#430#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mag_distribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <element signature="e#59#77#0" expanded="true" />
           </folding>
         </state>
       </provider>
