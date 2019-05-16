@@ -125,11 +125,16 @@ for i in range(360):
 matchedS82=matchedS82.drop_duplicates()
 unmatchedS82=S82.append(matchedS82).drop_duplicates(keep=False)
 
+matchedS82.rename(columns={'Unnamed: 0':'S82index'},inplace=True)
+unmatchedS82.rename(columns={'Unnamed: 0':'S82index'},inplace=True)
+matchedHSC.rename(columns={'Unnamed: 0':'HSCindex'},inplace=True)
+unmatchedHSC.rename(columns={'Unnamed: 0':'HSCindex'},inplace=True)
+
 matchedHSC.to_csv(pwd2+'matchedHSC')
 matchedS82.to_csv(pwd2+'matchedS82')
 unmatchedHSC.to_csv(pwd2+'unmatchedHSC')
 unmatchedS82.to_csv(pwd2+'unmatchedS82')
-matchlist.tp_csv(pwd2+'matchlist')
+matchlist.to_csv(pwd2+'matchlist')
 
 
 
