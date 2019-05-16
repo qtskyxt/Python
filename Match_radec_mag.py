@@ -127,8 +127,8 @@ unmatchedS82=S82.append(matchedS82).drop_duplicates(keep=False)
 
 matchedHSC.to_csv(pwd2+'matchedHSC',index_label='HSCindex')
 matchedS82.to_csv(pwd2+'matchedS82',index_label='S82index')
-unmatchedHSC.to_csv(pwd2+'unmatchedHSC'index_label='HSCindex')
-unmatchedS82.to_csv(pwd2+'unmatchedS82'index_label='S82index')
+unmatchedHSC.to_csv(pwd2+'unmatchedHSC',index_label='HSCindex')
+unmatchedS82.to_csv(pwd2+'unmatchedS82',index_label='S82index')
 matchlist.to_csv(pwd2+'matchlist',index=False)
 
 
