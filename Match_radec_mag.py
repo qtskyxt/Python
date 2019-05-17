@@ -73,42 +73,36 @@ unmatchedS82=pd.DataFrame(columns=S82.columns)
 matchlist=pd.DataFrame(columns=['HSCindex','HSCimag','matchednum'])
 TF=[[] for i in range(360)]
 def calculate(i):
-	if HSCs[i].empty:
-		return
-	else:
-		print(i,'b')
-		As = HSCs[i].values
-		Bs = S82s[i].values
-		for j in range(len(HSCs[i])):
-			n=0
-			sep = sep_s2m(As[j], Bs)
-			m = sep<=1
-			TF[i].append([])
-			for k in range(len(m)):
-				if m[k]:
-					TF[i][j].append(k)
+	print(i,'b')
+	As = HSCs[i].values
+	Bs = S82s[i].values
+	for j in range(len(HSCs[i])):
+		n=0
+		sep = sep_s2m(As[j], Bs)
+		m = sep<=1
+		TF[i].append([])
+		for k in range(len(m)):
+			if m[k]:
+				TF[i][j].append(k)
 	print(i,'e',flush=True)
 
 
 
 def putout(i):
-	if TF[i]==[]:
-		return
-	else:
-		for j in range(len(TF[i])):
-			n = 0
-			matchlist = matchlist.append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag}, ignore_index=True)
-			for k in range(len(TF[i][j])):
-				if TF[i][j]!=[]:
-					n = n + 1
-					matchedS82 = matchedS82.append(S82s[i].iloc[TF[i][j][k]])
-					matchlist.loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[TF[i][j][k]].name)
-					matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].iM
-			if n != 0:
-				matchedHSC = matchedHSC.append(HSCs[i].iloc[j])
-			else:
-				unmatchedHSC = unmatchedHSC.append(HSCs[i].iloc[j])
-			matchlist.loc[j, 'matchednum'] = n
+	for j in range(len(TF[i])):
+		n = 0
+		matchlist = matchlist.append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag}, ignore_index=True)
+		for k in range(len(TF[i][j])):
+			if TF[i][j]!=[]:
+				n = n + 1
+				matchedS82 = matchedS82.append(S82s[i].iloc[TF[i][j][k]])
+				matchlist.loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[TF[i][j][k]].name)
+				matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].iM
+		if n != 0:
+			matchedHSC = matchedHSC.append(HSCs[i].iloc[j])
+		else:
+			unmatchedHSC = unmatchedHSC.append(HSCs[i].iloc[j])
+		matchlist.loc[j, 'matchednum'] = n
 	print(i,'w',flush=True)
 ''' too slow to output with pandas during the calculation 
 			n=0
@@ -128,13 +122,25 @@ def putout(i):
 			matchlist.loc[j, 'matchednum'] = n
 			print(i,j,n)
 '''
+h=[]
+t=[]
+for i in range(360):
+	if HSCs[i].empty:
+		continue
+	else:
+		h.append(i)
+for i in range(360):
+	if TF[i]==[]:
+		continue
+	else:
+		t.append(i)
 
 pool1=mp.Pool(18)
-pool1.map(calculate,range(360))
+pool1.map(calculate,h)
 print('calculation finished',flush=True)
 pool1.close()
 pool2=mp.Pool(18)
-pool2.map(putout,range(360))
+pool2.map(putout,t)
 print('output finished',flush=True)
 pool2.close()
 
