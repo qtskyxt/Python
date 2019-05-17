@@ -87,7 +87,7 @@ def calculate(i):
 				TF[i][j].append(k)
 	print(i,flush=True)
 
-print('calculation finished',flush=True)
+
 
 def putout(i):
 	if TF[i]==[]:
@@ -129,7 +129,9 @@ def putout(i):
 
 pool=mp.Pool(20)
 pool.map(calculate,range(360))
+print('calculation finished',flush=True)
 pool.map(putout,range(360))
+print('output finished',flush=True)
 pool.close()
 
 matchedS82=matchedS82.drop_duplicates()
