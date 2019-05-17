@@ -130,6 +130,7 @@ def putout(i):
 pool=mp.Pool(20)
 pool.map(calculate,range(360))
 pool.map(putout,range(360))
+pool.close()
 
 matchedS82=matchedS82.drop_duplicates()
 unmatchedS82=S82.append(matchedS82).drop_duplicates(keep=False)
