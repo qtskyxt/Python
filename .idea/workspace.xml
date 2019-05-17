@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+            <state relative-caret-position="251">
+              <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
               <folding>
                 <element signature="e#85#103#0" expanded="true" />
               </folding>
@@ -443,11 +443,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557908547192</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="modified match_radec_mag.py with multiprocessing and free some memory during running">
+      <created>1558066949421</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1558066949421</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix bugs">
+      <created>1558067031131</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1558067031131</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106748000" />
+    <option name="totallyTimeSpent" value="107310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
@@ -521,7 +535,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="split data" />
     <MESSAGE value="debug" />
     <MESSAGE value="1" />
     <MESSAGE value="2" />
@@ -543,10 +556,11 @@
     <MESSAGE value="overlap final edition (bug fixed)" />
     <MESSAGE value="Match update with SkyCoord in array 5/12" />
     <MESSAGE value="modified match_radec_mag with pandas and at the meanwhile output the matched and unmatched file and the matchlist" />
-    <MESSAGE value="fix bugs" />
     <MESSAGE value="separate the calculation and the output to see if it can be accelerated" />
     <MESSAGE value="modified magerrmean-mag with pd." />
-    <option name="LAST_COMMIT_MESSAGE" value="modified magerrmean-mag with pd." />
+    <MESSAGE value="modified match_radec_mag.py with multiprocessing and free some memory during running" />
+    <MESSAGE value="fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -640,8 +654,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+        <state relative-caret-position="251">
+          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
           <folding>
             <element signature="e#85#103#0" expanded="true" />
           </folding>

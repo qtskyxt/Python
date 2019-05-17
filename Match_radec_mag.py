@@ -85,13 +85,13 @@ def calculate(i):
 			TF[i].append([])
 			for k in range(len(m)):
 				TF[i][j].append(k)
-	print(i)
+	print(i,flush=True)
 
-print('calculation finished' )
+print('calculation finished',flush=True)
 
 def putout(i):
 	if TF[i]==[]:
-		continue
+		return
 	else:
 		for j in range(len(TF[i])):
 			n = 0
@@ -107,7 +107,7 @@ def putout(i):
 			else:
 				unmatchedHSC = unmatchedHSC.append(HSCs[i].iloc[j])
 			matchlist.loc[j, 'matchednum'] = n
-	print(i)
+	print(i,flush=True)
 ''' too slow to output with pandas during the calculation 
 			n=0
 			matchlist=matchlist.append({'HSCindex':int(HSCs[i].iloc[j].name),'HSCimag':HSCs[i].iloc[j].i_cmodel_mag},ignore_index=True)
