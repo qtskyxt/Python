@@ -3,6 +3,7 @@
 import numpy as np
 import pandas as pd
 from astropy.coordinates import SkyCoord  #利用 astropy内置函数加快计算
+import multiprocessing as mp
 
 
 pwd1='/home/tian.qiu/data/catalog/'
@@ -71,7 +72,7 @@ unmatchedHSC=pd.DataFrame(columns=HSC.columns)
 unmatchedS82=pd.DataFrame(columns=S82.columns)
 matchlist=pd.DataFrame(columns=['HSCindex','HSCimag','matchednum'])
 TF=[[] for i in range(360)]
-for i in range(360):
+def calculate(i):
 	if HSCs[i].empty :
 		continue
 	else:
@@ -81,11 +82,14 @@ for i in range(360):
 			n=0
 			sep = sep_s2m(As[j], Bs)
 			m = sep<=1
-			TF[i].append(m)
+			TF[i].append([])
+			for k in range(len(m)):
+				TF[i][j].append(k)
 	print(i)
+
 print('calculation finished' )
 
-for i in range(360):
+def putout(i):
 	if TF[i]==[]:
 		continue
 	else:
@@ -93,11 +97,11 @@ for i in range(360):
 			n = 0
 			matchlist = matchlist.append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag}, ignore_index=True)
 			for k in range(len(TF[i][j])):
-				if TF[i][j][k]:
+				if TF[i][j]!=[]:
 					n = n + 1
-					matchedS82 = matchedS82.append(S82s[i].iloc[k])
-					matchlist.loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[k].name)
-					matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[k].iM
+					matchedS82 = matchedS82.append(S82s[i].iloc[TF[i][j][k]])
+					matchlist.loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[TF[i][j][k]].name)
+					matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].iM
 			if n != 0:
 				matchedHSC = matchedHSC.append(HSCs[i].iloc[j])
 			else:
@@ -122,6 +126,11 @@ for i in range(360):
 			matchlist.loc[j, 'matchednum'] = n
 			print(i,j,n)
 '''
+
+pool=mp.Pool(20)
+pool.map(calculate,range(360))
+pool.map(putout,range(360))
+
 matchedS82=matchedS82.drop_duplicates()
 unmatchedS82=S82.append(matchedS82).drop_duplicates(keep=False)
 
