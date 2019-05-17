@@ -129,12 +129,14 @@ def putout(i):
 			print(i,j,n)
 '''
 
-pool=mp.Pool(20)
-pool.map(calculate,range(360))
+pool1=mp.Pool(18)
+pool1.map(calculate,range(360))
 print('calculation finished',flush=True)
-pool.map(putout,range(360))
+pool1.close()
+pool2=mp.Pool(18)
+pool2.map(putout,range(360))
 print('output finished',flush=True)
-pool.close()
+pool2.close()
 
 matchedS82=matchedS82.drop_duplicates()
 unmatchedS82=S82.append(matchedS82).drop_duplicates(keep=False)

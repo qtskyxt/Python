@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Match_radec_mag.py" beforeDir="false" afterPath="$PROJECT_DIR$/Match_radec_mag.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+            <state relative-caret-position="-244">
+              <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
               <folding>
                 <element signature="e#85#103#0" expanded="true" />
               </folding>
@@ -457,11 +456,32 @@
       <option name="project" value="LOCAL" />
       <updated>1558067031131</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="fix bugs">
+      <created>1558067446058</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1558067446058</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fix bugs">
+      <created>1558067545765</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1558067545765</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fix bugs">
+      <created>1558075545858</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1558075545858</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107310000" />
+    <option name="totallyTimeSpent" value="108701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
@@ -654,8 +674,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+        <state relative-caret-position="-244">
+          <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
           <folding>
             <element signature="e#85#103#0" expanded="true" />
           </folding>
