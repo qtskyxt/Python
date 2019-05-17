@@ -73,9 +73,10 @@ unmatchedS82=pd.DataFrame(columns=S82.columns)
 matchlist=pd.DataFrame(columns=['HSCindex','HSCimag','matchednum'])
 TF=[[] for i in range(360)]
 def calculate(i):
-	if HSCs[i].empty :
-		continue
+	if HSCs[i].empty:
+		return
 	else:
+		print(i,'b')
 		As = HSCs[i].values
 		Bs = S82s[i].values
 		for j in range(len(HSCs[i])):
@@ -84,8 +85,9 @@ def calculate(i):
 			m = sep<=1
 			TF[i].append([])
 			for k in range(len(m)):
-				TF[i][j].append(k)
-	print(i,flush=True)
+				if m[k]:
+					TF[i][j].append(k)
+	print(i,'e',flush=True)
 
 
 
@@ -107,7 +109,7 @@ def putout(i):
 			else:
 				unmatchedHSC = unmatchedHSC.append(HSCs[i].iloc[j])
 			matchlist.loc[j, 'matchednum'] = n
-	print(i,flush=True)
+	print(i,'w',flush=True)
 ''' too slow to output with pandas during the calculation 
 			n=0
 			matchlist=matchlist.append({'HSCindex':int(HSCs[i].iloc[j].name),'HSCimag':HSCs[i].iloc[j].i_cmodel_mag},ignore_index=True)
