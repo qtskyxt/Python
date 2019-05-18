@@ -66,13 +66,14 @@ def dis(i,j,k,m):
 
 #创建记录文件，记录匹配的总数和编号，at the meanwhile, output the unmatched list and the matched list both in HSC and S82
 #match=open(pwd2+'match1s_aspy_mag.txt','w')
-matchedHSC=pd.DataFrame(columns=HSC.columns)
-matchedS82=pd.DataFrame(columns=S82.columns)
-unmatchedHSC=pd.DataFrame(columns=HSC.columns)
-unmatchedS82=pd.DataFrame(columns=S82.columns)
-matchlist=pd.DataFrame(columns=['HSCindex','HSCimag','matchednum'])
+matchedHSC=[pd.DataFrame(columns=HSC.columns) for i in range(360)]
+matchedS82=[pd.DataFrame(columns=S82.columns) for i in range(360)]
+unmatchedHSC=[pd.DataFrame(columns=HSC.columns) for i in range(360)]
+unmatchedS82=[pd.DataFrame(columns=S82.columns) for i in range(360)]
+matchlist=[pd.DataFrame(columns=['HSCindex','HSCimag','matchednum']) for i in range(360)]
 TF=[[] for i in range(360)]
 def calculate(i):
+	global TF
 	print(i,'b')
 	As = HSCs[i].values
 	Bs = S82s[i].values
@@ -89,20 +90,21 @@ def calculate(i):
 
 
 def putout(i):
+	global TF, matchlist, matchedS82, matchedHSC, unmatchedHSC
 	for j in range(len(TF[i])):
 		n = 0
-		matchlist = matchlist.append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag}, ignore_index=True)
+		matchlist[i] = matchlist[i].append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag}, ignore_index=True)
 		for k in range(len(TF[i][j])):
 			if TF[i][j]!=[]:
 				n = n + 1
-				matchedS82 = matchedS82.append(S82s[i].iloc[TF[i][j][k]])
-				matchlist.loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[TF[i][j][k]].name)
-				matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].iM
+				matchedS82[i] = matchedS82[i].append(S82s[i].iloc[TF[i][j][k]])
+				matchlist[i].loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[TF[i][j][k]].name)
+				matchlist[i].loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].iM
 		if n != 0:
-			matchedHSC = matchedHSC.append(HSCs[i].iloc[j])
+			matchedHSC[i] = matchedHSC[i].append(HSCs[i].iloc[j])
 		else:
-			unmatchedHSC = unmatchedHSC.append(HSCs[i].iloc[j])
-		matchlist.loc[j, 'matchednum'] = n
+			unmatchedHSC[i] = unmatchedHSC[i].append(HSCs[i].iloc[j])
+		matchlist[i].loc[j, 'matchednum'] = n
 	print(i,'w',flush=True)
 ''' too slow to output with pandas during the calculation 
 			n=0
@@ -129,29 +131,36 @@ for i in range(360):
 		continue
 	else:
 		h.append(i)
+
+
+pool1=mp.Pool(20)
+pool1.map(calculate,h)
+print('calculation finished',flush=True)
+pool1.close()
+
 for i in range(360):
 	if TF[i]==[]:
 		continue
 	else:
 		t.append(i)
 
-pool1=mp.Pool(18)
-pool1.map(calculate,h)
-print('calculation finished',flush=True)
-pool1.close()
-pool2=mp.Pool(18)
+pool2=mp.Pool(20)
 pool2.map(putout,t)
 print('output finished',flush=True)
 pool2.close()
 
-matchedS82=matchedS82.drop_duplicates()
-unmatchedS82=S82.append(matchedS82).drop_duplicates(keep=False)
+m=pd.concat(matchlist)
+mh=pd.concat(matchedHSC)
+umh=pd.concat(unmatchedHSC)
+ms=pd.concat(matchedS82)
+ms=ms.drop_duplicates()
+ums=S82.append(ms).drop_duplicates(keep=False)
 
-matchedHSC.to_csv(pwd2+'matchedHSC',index_label='HSCindex')
-matchedS82.to_csv(pwd2+'matchedS82',index_label='S82index')
-unmatchedHSC.to_csv(pwd2+'unmatchedHSC',index_label='HSCindex')
-unmatchedS82.to_csv(pwd2+'unmatchedS82',index_label='S82index')
-matchlist.to_csv(pwd2+'matchlist',index=False)
+mh.to_csv(pwd2+'matchedHSC',index_label='HSCindex')
+ms.to_csv(pwd2+'matchedS82',index_label='S82index')
+umh.to_csv(pwd2+'unmatchedHSC',index_label='HSCindex')
+ums.to_csv(pwd2+'unmatchedS82',index_label='S82index')
+m.to_csv(pwd2+'matchlist',index=False)
 
 
 
