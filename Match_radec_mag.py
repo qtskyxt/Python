@@ -156,12 +156,12 @@ for i in h:
 	matchlist[i]=data[h.index(i)][3]
 print('output finished',flush=True)
 
-m=pd.concat(matchlist)
-mh=pd.concat(matchedHSC)
-umh=pd.concat(unmatchedHSC)
-ms=pd.concat(matchedS82)
+m=pd.concat(matchlist[i] for i in h)
+mh=pd.concat(matchedHSC[i] for i in h)
+umh=pd.concat(unmatchedHSC[i] for i in h)
+ms=pd.concat(matchedS82[i] for i in h)
 ms=ms.drop_duplicates()
-ums=S82.append(ms).drop_duplicates(keep=False)
+ums=(S82.append(ms)).drop_duplicates(keep=False)
 
 mh.to_csv(pwd2+'matchedHSC',index_label='HSCindex')
 ms.to_csv(pwd2+'matchedS82',index_label='S82index')

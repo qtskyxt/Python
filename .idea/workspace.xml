@@ -27,23 +27,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1523">
-              <caret line="146" column="16" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
+            <state relative-caret-position="681">
+              <caret line="162" column="23" lean-forward="true" selection-start-line="162" selection-start-column="23" selection-end-line="162" selection-end-column="23" />
               <folding>
                 <element signature="e#85#103#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/overlap.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -78,8 +69,8 @@
         <option value="$PROJECT_DIR$/listunmatch.py" />
         <option value="$PROJECT_DIR$/magerrmean-mag.py" />
         <option value="$PROJECT_DIR$/mag_distribution.py" />
-        <option value="$PROJECT_DIR$/Match_radec_mag.py" />
         <option value="$PROJECT_DIR$/overlap.py" />
+        <option value="$PROJECT_DIR$/Match_radec_mag.py" />
       </list>
     </option>
   </component>
@@ -164,13 +155,6 @@
       <workItem from="1557730139086" duration="1731000" />
       <workItem from="1557882311094" duration="6361000" />
       <workItem from="1558063513669" duration="1727000" />
-    </task>
-    <task id="LOCAL-00001" summary="hello world">
-      <created>1556090113607</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1556090113607</updated>
     </task>
     <task id="LOCAL-00002" summary="hello world">
       <created>1556090336633</created>
@@ -501,11 +485,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558078942141</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="fix bugs">
+      <created>1558160697967</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1558160697967</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fix the problem that we cannot use the global variables in mp.Pool.map. We can only use return since the variables in the different processing is quite different.">
+      <created>1558281181769</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1558281181769</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113083000" />
+    <option name="totallyTimeSpent" value="119642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
@@ -579,7 +577,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug" />
     <MESSAGE value="1" />
     <MESSAGE value="2" />
     <MESSAGE value="make it robust" />
@@ -604,7 +601,8 @@
     <MESSAGE value="modified magerrmean-mag with pd." />
     <MESSAGE value="modified match_radec_mag.py with multiprocessing and free some memory during running" />
     <MESSAGE value="fix bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
+    <MESSAGE value="fix the problem that we cannot use the global variables in mp.Pool.map. We can only use return since the variables in the different processing is quite different." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the problem that we cannot use the global variables in mp.Pool.map. We can only use return since the variables in the different processing is quite different." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -689,20 +687,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
+    <entry file="file://$PROJECT_DIR$/overlap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1523">
-          <caret line="146" column="16" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
-          <folding>
-            <element signature="e#85#103#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1377">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/overlap.py">
+    <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="681">
+          <caret line="162" column="23" lean-forward="true" selection-start-line="162" selection-start-column="23" selection-end-line="162" selection-end-column="23" />
+          <folding>
+            <element signature="e#85#103#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
