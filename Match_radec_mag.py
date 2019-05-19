@@ -72,8 +72,9 @@ unmatchedHSC=[pd.DataFrame(columns=HSC.columns) for i in range(360)]
 unmatchedS82=[pd.DataFrame(columns=S82.columns) for i in range(360)]
 matchlist=[pd.DataFrame(columns=['HSCindex','HSCimag','matchednum']) for i in range(360)]
 TF=[[] for i in range(360)]
+
 def calculate(i):
-	global TF
+	t=[]
 	print(i,'b')
 	As = HSCs[i].values
 	Bs = S82s[i].values
@@ -81,31 +82,37 @@ def calculate(i):
 		n=0
 		sep = sep_s2m(As[j], Bs)
 		m = sep<=1
-		TF[i].append([])
+		t.append([])
 		for k in range(len(m)):
 			if m[k]:
-				TF[i][j].append(k)
+				t[j].append(k)
 	print(i,'e',flush=True)
+	return t
 
 
 
 def putout(i):
-	global TF, matchlist, matchedS82, matchedHSC, unmatchedHSC
+	print(i,'wb')
+	matchedHSC = pd.DataFrame(columns=HSC.columns)
+	matchedS82 = pd.DataFrame(columns=S82.columns)
+	unmatchedHSC = pd.DataFrame(columns=HSC.columns)
+	matchlist = pd.DataFrame(columns=['HSCindex', 'HSCimag', 'matchednum'])
 	for j in range(len(TF[i])):
 		n = 0
-		matchlist[i] = matchlist[i].append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag}, ignore_index=True)
+		matchlist = matchlist.append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag}, ignore_index=True)
 		for k in range(len(TF[i][j])):
 			if TF[i][j]!=[]:
 				n = n + 1
-				matchedS82[i] = matchedS82[i].append(S82s[i].iloc[TF[i][j][k]])
-				matchlist[i].loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[TF[i][j][k]].name)
-				matchlist[i].loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].iM
+				matchedS82 = matchedS82.append(S82s[i].iloc[TF[i][j][k]])
+				matchlist.loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[TF[i][j][k]].name)
+				matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].iM
 		if n != 0:
-			matchedHSC[i] = matchedHSC[i].append(HSCs[i].iloc[j])
+			matchedHSC = matchedHSC.append(HSCs[i].iloc[j])
 		else:
-			unmatchedHSC[i] = unmatchedHSC[i].append(HSCs[i].iloc[j])
-		matchlist[i].loc[j, 'matchednum'] = n
-	print(i,'w',flush=True)
+			unmatchedHSC = unmatchedHSC.append(HSCs[i].iloc[j])
+		matchlist.loc[j, 'matchednum'] = n
+	print(i,'we',flush=True)
+	return matchedHSC,matchedS82,unmatchedHSC,matchlist
 ''' too slow to output with pandas during the calculation 
 			n=0
 			matchlist=matchlist.append({'HSCindex':int(HSCs[i].iloc[j].name),'HSCimag':HSCs[i].iloc[j].i_cmodel_mag},ignore_index=True)
@@ -125,7 +132,6 @@ def putout(i):
 			print(i,j,n)
 '''
 h=[]
-t=[]
 for i in range(360):
 	if HSCs[i].empty:
 		continue
@@ -134,20 +140,21 @@ for i in range(360):
 
 
 pool1=mp.Pool(20)
-pool1.map(calculate,h)
-print('calculation finished',flush=True)
+data=pool1.map(calculate,h)
 pool1.close()
-
-for i in range(360):
-	if TF[i]==[]:
-		continue
-	else:
-		t.append(i)
+for i in h:
+	TF[i]=data[h.index(i)]
+print('calculation finished',flush=True)
 
 pool2=mp.Pool(20)
-pool2.map(putout,t)
-print('output finished',flush=True)
+data=pool2.map(putout,h)
 pool2.close()
+for i in h:
+	matchedHSC[i]=data[h.index(i)][0]
+	matchedS82[i]=data[h.index(i)][1]
+	unmatchedHSC[i]=data[h.index(i)][2]
+	matchlist[i]=data[h.index(i)][3]
+print('output finished',flush=True)
 
 m=pd.concat(matchlist)
 mh=pd.concat(matchedHSC)
