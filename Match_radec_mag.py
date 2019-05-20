@@ -75,7 +75,7 @@ TF=[[] for i in range(360)]
 
 def calculate(i):
 	t=[]
-	print(i,'b')
+	print(i,'b',flush=True)
 	As = HSCs[i].values
 	Bs = S82s[i].values
 	for j in range(len(HSCs[i])):
@@ -92,7 +92,7 @@ def calculate(i):
 
 
 def putout(i):
-	print(i,'wb')
+	print(i,'wb',flush=True)
 	matchedHSC = pd.DataFrame(columns=HSC.columns)
 	matchedS82 = pd.DataFrame(columns=S82.columns)
 	unmatchedHSC = pd.DataFrame(columns=HSC.columns)
