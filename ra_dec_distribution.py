@@ -1,6 +1,6 @@
 #画出 HSC 和 S82 中 star 的位置分布
 
-import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
 pwd1='/home/tian.qiu/data/catalog/'
