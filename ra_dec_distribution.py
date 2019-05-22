@@ -8,14 +8,14 @@ pwd2='/home/tian.qiu/data/plot/'
 HSC=pd.read_csv(pwd1+'olHSC')
 S82=pd.read_csv(pwd1+'olS82',sep='\s+')
 
-hs=HSC.sample(frac=0.01,axis=0)
-ss=S82.sample(frac=0.01,axis=0)
+hs=HSC.sample(frac=0.005,axis=0)
+ss=S82.sample(frac=0.005,axis=0)
 
 
-plt.figure(figsize=(8,12),dpi=300)
+plt.figure(figsize=(8,6),dpi=300)
 plt.title('dec vs ra distribution')
-plt.scatter(hs.ra,hs.dec,label='HSC',alpha=0.1)
-plt.scatter(ss.ra,ss.dec,color='red',label='S82',alpha=0.1)
+plt.scatter(hs.ra,hs.dec,label='HSC',alpha=0.3,s=0.1)
+plt.scatter(ss.ra,ss.dec,color='red',label='S82',alpha=0.3,s=0.1)
 
 plt.xlabel('ra')
 plt.ylabel('dec')

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/raerr_decerr.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ra_dec_distribution.py" beforeDir="false" afterPath="$PROJECT_DIR$/ra_dec_distribution.py" afterDir="false" />
     </list>
@@ -29,12 +28,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/raerr_decerr.py">
+        <entry file="file://$PROJECT_DIR$/ra_dec_distribution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="297">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding>
-                <element signature="e#36#67#0" expanded="true" />
+                <element signature="e#28#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,8 +70,8 @@
         <option value="$PROJECT_DIR$/mag_distribution.py" />
         <option value="$PROJECT_DIR$/overlap.py" />
         <option value="$PROJECT_DIR$/Match_radec_mag.py" />
-        <option value="$PROJECT_DIR$/ra_dec_distribution.py" />
         <option value="$PROJECT_DIR$/raerr_decerr.py" />
+        <option value="$PROJECT_DIR$/ra_dec_distribution.py" />
       </list>
     </option>
   </component>
@@ -157,14 +156,7 @@
       <workItem from="1557730139086" duration="1731000" />
       <workItem from="1557882311094" duration="6361000" />
       <workItem from="1558063513669" duration="1727000" />
-      <workItem from="1558499143082" duration="1193000" />
-    </task>
-    <task id="LOCAL-00006" summary="debug">
-      <created>1556102879998</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1556102879998</updated>
+      <workItem from="1558499143082" duration="889000" />
     </task>
     <task id="LOCAL-00007" summary="1">
       <created>1556112905068</created>
@@ -502,11 +494,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558343863301</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="fix bugs">
+      <created>1558501524779</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1558501524780</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123326000" />
+    <option name="totallyTimeSpent" value="124035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
@@ -580,7 +579,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1" />
     <MESSAGE value="2" />
     <MESSAGE value="make it robust" />
     <MESSAGE value="4th edition" />
@@ -604,6 +602,7 @@
     <MESSAGE value="modified magerrmean-mag with pd." />
     <MESSAGE value="modified match_radec_mag.py with multiprocessing and free some memory during running" />
     <MESSAGE value="fix the problem that we cannot use the global variables in mp.Pool.map. We can only use return since the variables in the different processing is quite different." />
+    <MESSAGE value="new plot script of delta_ra vs delta_dec (not finished)&#10;&#10;modified the ra_dec_distribution.py with pandas" />
     <MESSAGE value="fix bugs" />
     <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
   </component>
@@ -673,16 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mag_distribution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <element signature="e#59#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/overlap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1377">
@@ -690,10 +679,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mag_distribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#59#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raerr_decerr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="161" column="49" selection-start-line="161" selection-start-column="49" selection-end-line="161" selection-end-column="49" />
+        <state relative-caret-position="162">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#85#103#0" expanded="true" />
           </folding>
@@ -702,17 +711,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ra_dec_distribution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raerr_decerr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="297">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding>
-            <element signature="e#36#67#0" expanded="true" />
+            <element signature="e#28#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
