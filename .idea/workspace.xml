@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/raerr_decerr.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Match_radec_mag.py" beforeDir="false" afterPath="$PROJECT_DIR$/Match_radec_mag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ra_dec_distribution.py" beforeDir="false" afterPath="$PROJECT_DIR$/ra_dec_distribution.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,12 +29,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
+        <entry file="file://$PROJECT_DIR$/raerr_decerr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1269">
-              <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+            <state relative-caret-position="81">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
-                <element signature="e#85#103#0" expanded="true" />
+                <element signature="e#36#67#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,7 +64,6 @@
         <option value="$PROJECT_DIR$/split.py" />
         <option value="$PROJECT_DIR$/cut.py" />
         <option value="$PROJECT_DIR$/magerr-mag-3.py" />
-        <option value="$PROJECT_DIR$/ra_dec_distribution.py" />
         <option value="$PROJECT_DIR$/Match_radec2.py" />
         <option value="$PROJECT_DIR$/Match_radec.py" />
         <option value="$PROJECT_DIR$/listunmatch.py" />
@@ -71,13 +71,15 @@
         <option value="$PROJECT_DIR$/mag_distribution.py" />
         <option value="$PROJECT_DIR$/overlap.py" />
         <option value="$PROJECT_DIR$/Match_radec_mag.py" />
+        <option value="$PROJECT_DIR$/ra_dec_distribution.py" />
+        <option value="$PROJECT_DIR$/raerr_decerr.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="439" />
+    <option name="width" value="1280" />
+    <option name="height" value="1417" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -87,6 +89,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,7 +101,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -155,20 +157,7 @@
       <workItem from="1557730139086" duration="1731000" />
       <workItem from="1557882311094" duration="6361000" />
       <workItem from="1558063513669" duration="1727000" />
-    </task>
-    <task id="LOCAL-00004" summary="debug">
-      <created>1556096281433</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1556096281433</updated>
-    </task>
-    <task id="LOCAL-00005" summary="split data">
-      <created>1556102076926</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1556102076926</updated>
+      <workItem from="1558499143082" duration="1193000" />
     </task>
     <task id="LOCAL-00006" summary="debug">
       <created>1556102879998</created>
@@ -499,17 +488,31 @@
       <option name="project" value="LOCAL" />
       <updated>1558338254587</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="fix bugs">
+      <created>1558338863668</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1558338863668</updated>
+    </task>
+    <task id="LOCAL-00054" summary="fix bugs">
+      <created>1558343863301</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1558343863301</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121274000" />
+    <option name="totallyTimeSpent" value="123326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24248926" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24174918" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -526,7 +529,7 @@
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299373" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32943925" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="right" x="0" y="0" width="270" height="1217" id="Documentation" order="0" side_tool="true" weight="0.32838285" />
+      <window_info anchor="right" x="0" y="0" width="270" height="1217" id="Documentation" order="0" side_tool="true" weight="0.3282504" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -631,13 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ra_dec_distribution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -696,10 +692,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec_mag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1269">
-          <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+        <state relative-caret-position="397">
+          <caret line="161" column="49" selection-start-line="161" selection-start-column="49" selection-end-line="161" selection-end-column="49" />
           <folding>
             <element signature="e#85#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ra_dec_distribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raerr_decerr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#36#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
