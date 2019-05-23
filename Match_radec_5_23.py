@@ -79,7 +79,6 @@ def calculate(i):
 	As = HSCs[i].values
 	Bs = S82s[i].values
 	for j in range(len(HSCs[i])):
-		n=0
 		sep = sep_s2m(As[j], Bs)
 		m = sep<=1
 		t.append([])
@@ -96,16 +95,23 @@ def putout(i):
 	matchedHSC = pd.DataFrame(columns=HSC.columns)
 	matchedS82 = pd.DataFrame(columns=S82.columns)
 	unmatchedHSC = pd.DataFrame(columns=HSC.columns)
-	matchlist = pd.DataFrame(columns=['HSCindex', 'HSCimag', 'matchednum'])
+	matchlist = pd.DataFrame(columns=['HSCindex', 'HSCimag', 'HSCra','HSCdec','matchednum'])
 	for j in range(len(TF[i])):
 		n = 0
-		matchlist = matchlist.append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag}, ignore_index=True)
+		hra=HSCs[i].iloc[j].ra
+		hdec=HSCs[i].iloc[j].dec
+		matchlist = matchlist.append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag,'HSCra': hra,'HSCdec' :hdec}, ignore_index=True)
 		for k in range(len(TF[i][j])):
 			if TF[i][j]!=[]:
 				n = n + 1
 				matchedS82 = matchedS82.append(S82s[i].iloc[TF[i][j][k]])
 				matchlist.loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[TF[i][j][k]].name)
 				matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].iM
+				sra=S82s[i].iloc[TF[i][j][k]].ra
+				sdec=S82s[i].iloc[TF[i][j][k]].dec
+				matchlist.loc[j, 'S82ra' + str(n)] = sra
+				matchlist.loc[j, 'S82dec' + str(n)] = sdec
+				matchlist.loc[j, 'S82sep' + str(n)] = SkyCoord(hra,hdec,unit='deg').separation(SkyCoord(sra,sdec,unit='deg')).arcsec
 		if n != 0:
 			matchedHSC = matchedHSC.append(HSCs[i].iloc[j])
 		else:
