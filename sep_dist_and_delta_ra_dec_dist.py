@@ -20,19 +20,37 @@ plt.title('separation distribution')
 plt.ylabel('N')
 plt.yscale('log')
 plt.xlabel('separation/arcsec')
-plt.savefig(pwd2+'sep_dist_5_23.png')
+plt.savefig(pwd2+'sep_dist_5_24.png')
 plt.close()
 
-ms=m.sample(frac=0.005,axis=0)
-delta_ra=(ms.HSCra.values-ms.S82ra1.values)*3600
-delta_dec=(ms.HSCra.values-ms.S82ra1.values)*3600
+#ms=m.sample(frac=0.005,axis=0)
+delta_ra=(m.HSCra.values-m.S82ra1.values)*3600
+delta_dec=(m.HSCdec.values-m.S82dec1.values)*3600
 plt.figure()
 plt.title('delta_dec vs delta_ra distribution')
-plt.scatter(delta_ra,delta_dec,alpha=0.3,s=0.1)
+plt.scatter(delta_ra,delta_dec,alpha=1,s=0.1)
 plt.xlabel('delta_ra/arcsec')
 plt.ylabel('delta_dec/arcsec')
 plt.axis([-1,1,-1,1])
-plt.savefig(pwd2+'delta_ra_dec_dist_5_23.png')
+plt.savefig(pwd2+'delta_ra_dec_dist_5_24.png')
+
+plt.figure()
+plt.hist(delta_ra,bins=40,color='red',histtype='step')
+plt.title('delta_ra distribution')
+plt.ylabel('N')
+plt.yscale('log')
+plt.xlabel('delta_ra/arcsec')
+plt.savefig(pwd2+'delta_ra_dist_5_24.png')
+plt.close()
+
+plt.figure()
+plt.hist(delta_dec,bins=40,color='red',histtype='step')
+plt.title('delta_dec distribution')
+plt.ylabel('N')
+plt.yscale('log')
+plt.xlabel('delta_dec/arcsec')
+plt.savefig(pwd2+'delta_dec_dist_5_24.png')
+plt.close()
 '''
 radec=pd.DataFrame(columns=['HSCindex','ra1','dec1','S82index','ra2','dec2'])
 def output(i):

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="modified the name of sep_distribution.py and">
+    <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mag_distribution.py" beforeDir="false" afterPath="$PROJECT_DIR$/mag_dist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sep_distribution.py" beforeDir="false" afterPath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,31 +30,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="513">
+              <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
               <folding>
                 <element signature="e#117#148#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ra_dec_distribution.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Match_radec_5_23.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2700">
-              <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
-              <folding>
-                <element signature="e#85#103#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,13 +67,11 @@
         <option value="$PROJECT_DIR$/Match_radec.py" />
         <option value="$PROJECT_DIR$/listunmatch.py" />
         <option value="$PROJECT_DIR$/magerrmean-mag.py" />
+        <option value="$PROJECT_DIR$/mag_distribution.py" />
         <option value="$PROJECT_DIR$/overlap.py" />
+        <option value="$PROJECT_DIR$/Match_radec_mag.py" />
         <option value="$PROJECT_DIR$/raerr_decerr.py" />
         <option value="$PROJECT_DIR$/ra_dec_distribution.py" />
-        <option value="$PROJECT_DIR$/mag_distribution.py" />
-        <option value="$PROJECT_DIR$/sep_distribution.py" />
-        <option value="$PROJECT_DIR$/Match_radec_mag.py" />
-        <option value="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" />
       </list>
     </option>
   </component>
@@ -181,7 +157,15 @@
       <workItem from="1557882311094" duration="6361000" />
       <workItem from="1558063513669" duration="1727000" />
       <workItem from="1558499143082" duration="889000" />
-      <workItem from="1558584444958" duration="726000" />
+      <workItem from="1558584444958" duration="912000" />
+      <workItem from="1558668364632" duration="32000" />
+    </task>
+    <task id="LOCAL-00006" summary="debug">
+      <created>1556102879998</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1556102879998</updated>
     </task>
     <task id="LOCAL-00007" summary="1">
       <created>1556112905068</created>
@@ -519,24 +503,17 @@
       <option name="project" value="LOCAL" />
       <updated>1558343863301</updated>
     </task>
-    <task id="LOCAL-00055" summary="modified Match_radec_mag.py to Match_radec_5_23.py&#10;  add more output to matchlist, including ra and dec of HSC and S82 pairs.&#10;&#10;modified sep_distibution.py but not finished">
-      <created>1558599194743</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1558599194743</updated>
-    </task>
-    <option name="localTasksCounter" value="56" />
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134359000" />
+    <option name="totallyTimeSpent" value="124893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24587458" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -562,6 +539,33 @@
       <window_info anchor="right" id="R Packages" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.32920793" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24248926" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32866043" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32866043" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299373" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32943925" />
+      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="right" x="0" y="0" width="270" height="1217" id="Documentation" order="0" side_tool="true" weight="0.32838285" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.3297568" />
+      <window_info anchor="right" id="R Graphics" order="5" />
+      <window_info anchor="right" id="R Packages" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32920793" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -577,6 +581,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="2" />
     <MESSAGE value="make it robust" />
     <MESSAGE value="4th edition" />
     <MESSAGE value="fix arcsec bug" />
@@ -601,10 +606,16 @@
     <MESSAGE value="fix the problem that we cannot use the global variables in mp.Pool.map. We can only use return since the variables in the different processing is quite different." />
     <MESSAGE value="fix bugs" />
     <MESSAGE value="new plot script of delta_ra vs delta_dec (not finished)&#10;&#10;modified the ra_dec_distribution.py with pandas" />
-    <MESSAGE value="modified Match_radec_mag.py to Match_radec_5_23.py&#10;  add more output to matchlist, including ra and dec of HSC and S82 pairs.&#10;&#10;modified sep_distibution.py but not finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified Match_radec_mag.py to Match_radec_5_23.py&#10;  add more output to matchlist, including ra and dec of HSC and S82 pairs.&#10;&#10;modified sep_distibution.py but not finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="new plot script of delta_ra vs delta_dec (not finished)&#10;&#10;modified the ra_dec_distribution.py with pandas" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ra&amp;dec.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -617,6 +628,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/slice.py" />
+    <entry file="file://$PROJECT_DIR$/split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -629,38 +647,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cut.py" />
     <entry file="file://$PROJECT_DIR$/listunmatch.py" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/split.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raerr_decerr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/magerr-mag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="-616">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/magerr-mag-3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1431">
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        <state>
           <folding>
             <element signature="e#48#66#0" expanded="true" />
           </folding>
@@ -669,49 +665,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/magerrmean-mag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
+        <state>
           <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#199#430#1" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/overlap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="1377">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mag_dist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#59#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mag_distribution.py" />
+    <entry file="file://$PROJECT_DIR$/raerr_decerr.py" />
     <entry file="file://$PROJECT_DIR$/ra_dec_distribution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="54">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Match_radec_5_23.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2700">
-          <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
-          <folding>
-            <element signature="e#85#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Match_radec_mag.py" />
     <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        <state relative-caret-position="513">
+          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
           <folding>
             <element signature="e#117#148#0" expanded="true" />
           </folding>
