@@ -29,8 +29,8 @@ delta_dec=ms.HSCra.values-ms.S82ra1.values
 plt.figure()
 plt.title('delta_dec vs delta_ra distribution')
 plt.scatter(delta_ra,delta_dec,alpha=0.3,s=0.1)
-plt.xlabel('ra/arcsec')
-plt.ylabel('dec/arcsec')
+plt.xlabel('delta_ra/arcsec')
+plt.ylabel('delta_dec/arcsec')
 plt.axis([-1,1,-1,1])
 plt.savefig(pwd2+'delta_ra_dec_dist_5_23.png')
 '''
