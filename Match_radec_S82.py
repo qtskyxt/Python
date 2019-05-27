@@ -94,7 +94,7 @@ def putout(i):
 	print(i,'wb',flush=True)
 	matchedHSC = pd.DataFrame(columns=HSC.columns)
 	matchedS82 = pd.DataFrame(columns=S82.columns)
-	unmatchedHSC = pd.DataFrame(columns=HSC.columns)
+	unmatchedS82 = pd.DataFrame(columns=S82.columns)
 	matchlist = pd.DataFrame(columns=['S82index', 'S82imag', 'S82ra','S82dec','matchednum'])
 	for j in range(len(TF[i])):
 		n = 0
@@ -155,17 +155,17 @@ print('calculation finished',flush=True)
 pool2=mp.Pool(20)
 data=pool2.map(putout,s)
 pool2.close()
-for i in h:
+for i in s:
 	matchedHSC[i]=data[s.index(i)][0]
 	matchedS82[i]=data[s.index(i)][1]
 	unmatchedS82[i]=data[s.index(i)][2]
 	matchlist[i]=data[s.index(i)][3]
 print('output finished',flush=True)
 
-m=pd.concat([matchlist[i] for i in h],sort=False)
-mh=pd.concat([matchedHSC[i] for i in h],sort=False)
-ums=pd.concat([unmatchedS82[i] for i in h],sort=False)
-ms=pd.concat([matchedS82[i] for i in h],sort=False)
+m=pd.concat([matchlist[i] for i in s],sort=False)
+mh=pd.concat([matchedHSC[i] for i in s],sort=False)
+ums=pd.concat([unmatchedS82[i] for i in s],sort=False)
+ms=pd.concat([matchedS82[i] for i in s],sort=False)
 mh=mh.drop_duplicates()
 umh=(HSC.append(mh)).drop_duplicates(keep=False)
 
