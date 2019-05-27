@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Match_radec.py" beforeDir="false" afterPath="$PROJECT_DIR$/Match_radec_S82.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Match_radec_5_23.py" beforeDir="false" afterPath="$PROJECT_DIR$/Match_radec_HSC.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,13 +28,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Match_radec_S82.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+            <state relative-caret-position="4636">
+              <caret line="175" column="38" lean-forward="true" selection-start-line="175" selection-start-column="38" selection-end-line="175" selection-end-column="38" />
               <folding>
-                <element signature="e#117#148#0" expanded="true" />
+                <element signature="e#85#103#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Match_radec_HSC.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+              <folding>
+                <element signature="e#85#103#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,6 +60,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>HSC</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -64,7 +82,6 @@
         <option value="$PROJECT_DIR$/cut.py" />
         <option value="$PROJECT_DIR$/magerr-mag-3.py" />
         <option value="$PROJECT_DIR$/Match_radec2.py" />
-        <option value="$PROJECT_DIR$/Match_radec.py" />
         <option value="$PROJECT_DIR$/listunmatch.py" />
         <option value="$PROJECT_DIR$/magerrmean-mag.py" />
         <option value="$PROJECT_DIR$/mag_distribution.py" />
@@ -72,6 +89,9 @@
         <option value="$PROJECT_DIR$/Match_radec_mag.py" />
         <option value="$PROJECT_DIR$/raerr_decerr.py" />
         <option value="$PROJECT_DIR$/ra_dec_distribution.py" />
+        <option value="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" />
+        <option value="$PROJECT_DIR$/Match_radec.py" />
+        <option value="$PROJECT_DIR$/Match_radec_S82.py" />
       </list>
     </option>
   </component>
@@ -159,13 +179,6 @@
       <workItem from="1558499143082" duration="889000" />
       <workItem from="1558584444958" duration="912000" />
       <workItem from="1558668364632" duration="32000" />
-    </task>
-    <task id="LOCAL-00006" summary="debug">
-      <created>1556102879998</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1556102879998</updated>
     </task>
     <task id="LOCAL-00007" summary="1">
       <created>1556112905068</created>
@@ -503,17 +516,24 @@
       <option name="project" value="LOCAL" />
       <updated>1558343863301</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="fix bugs and add the histgram dist of delta ra and dec">
+      <created>1558675669130</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1558675669130</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124893000" />
+    <option name="totallyTimeSpent" value="127406000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
+    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1211878" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -539,33 +559,6 @@
       <window_info anchor="right" id="R Packages" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.32920793" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24248926" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32866043" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32866043" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299373" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32943925" />
-      <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="right" x="0" y="0" width="270" height="1217" id="Documentation" order="0" side_tool="true" weight="0.32838285" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="4" weight="0.3297568" />
-      <window_info anchor="right" id="R Graphics" order="5" />
-      <window_info anchor="right" id="R Packages" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32920793" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -581,7 +574,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2" />
     <MESSAGE value="make it robust" />
     <MESSAGE value="4th edition" />
     <MESSAGE value="fix arcsec bug" />
@@ -606,7 +598,8 @@
     <MESSAGE value="fix the problem that we cannot use the global variables in mp.Pool.map. We can only use return since the variables in the different processing is quite different." />
     <MESSAGE value="fix bugs" />
     <MESSAGE value="new plot script of delta_ra vs delta_dec (not finished)&#10;&#10;modified the ra_dec_distribution.py with pandas" />
-    <option name="LAST_COMMIT_MESSAGE" value="new plot script of delta_ra vs delta_dec (not finished)&#10;&#10;modified the ra_dec_distribution.py with pandas" />
+    <MESSAGE value="fix bugs and add the histgram dist of delta ra and dec" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs and add the histgram dist of delta ra and dec" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -632,16 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Match_radec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#46#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,10 +676,30 @@
     <entry file="file://$PROJECT_DIR$/Match_radec_mag.py" />
     <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="602">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding>
             <element signature="e#117#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Match_radec_S82.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4636">
+          <caret line="175" column="38" lean-forward="true" selection-start-line="175" selection-start-column="38" selection-end-line="175" selection-end-column="38" />
+          <folding>
+            <element signature="e#85#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Match_radec_HSC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding>
+            <element signature="e#85#103#0" expanded="true" />
           </folding>
         </state>
       </provider>
