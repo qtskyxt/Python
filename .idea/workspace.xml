@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="801">
-              <caret line="64" column="31" lean-forward="true" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+            <state relative-caret-position="561">
+              <caret line="41" column="115" selection-start-line="41" selection-start-column="115" selection-end-line="41" selection-end-column="115" />
               <folding>
                 <element signature="e#173#204#0" expanded="true" />
               </folding>
@@ -167,20 +167,6 @@
       <workItem from="1558499143082" duration="889000" />
       <workItem from="1558584444958" duration="912000" />
       <workItem from="1558668364632" duration="32000" />
-    </task>
-    <task id="LOCAL-00009" summary="make it robust">
-      <created>1556199339861</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1556199339861</updated>
-    </task>
-    <task id="LOCAL-00010" summary="4th edition">
-      <created>1556284232991</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1556284232992</updated>
     </task>
     <task id="LOCAL-00011" summary="fix arcsec bug">
       <created>1557212022359</created>
@@ -511,11 +497,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558945194835</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="modified sep_dist_and_delta_ra_dec_dist.py&#10;add the fitting for the sep dist">
+      <created>1559203167460</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1559203167460</updated>
+    </task>
+    <task id="LOCAL-00059" summary="fix bugs">
+      <created>1559203425650</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1559203425650</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136862000" />
+    <option name="totallyTimeSpent" value="137388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
@@ -562,7 +562,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="4th edition" />
     <MESSAGE value="fix arcsec bug" />
     <MESSAGE value="add astropy.coordinates to accelerate calculation" />
     <MESSAGE value="test for the cut off" />
@@ -586,6 +585,7 @@
     <MESSAGE value="new plot script of delta_ra vs delta_dec (not finished)&#10;&#10;modified the ra_dec_distribution.py with pandas" />
     <MESSAGE value="fix bugs and add the histgram dist of delta ra and dec" />
     <MESSAGE value="rename Match_radec_5_23.py to Match_radec_HSC.py&#10;&#10;rm the old match script Match_radec.py&#10;create a new match script Match_radec_S82.py to match every S82 stars to HSC catalog. The mirror edition of the previous one." />
+    <MESSAGE value="modified sep_dist_and_delta_ra_dec_dist.py&#10;add the fitting for the sep dist" />
     <MESSAGE value="fix bugs" />
     <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
   </component>
@@ -684,8 +684,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
-          <caret line="64" column="31" lean-forward="true" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+        <state relative-caret-position="561">
+          <caret line="41" column="115" selection-start-line="41" selection-start-column="115" selection-end-line="41" selection-end-column="115" />
           <folding>
             <element signature="e#173#204#0" expanded="true" />
           </folding>
