@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Match_radec.py" beforeDir="false" afterPath="$PROJECT_DIR$/Match_radec_S82.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Match_radec_5_23.py" beforeDir="false" afterPath="$PROJECT_DIR$/Match_radec_HSC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,25 +27,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Match_radec_S82.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4636">
-              <caret line="175" column="38" lean-forward="true" selection-start-line="175" selection-start-column="38" selection-end-line="175" selection-end-column="38" />
-              <folding>
-                <element signature="e#85#103#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Match_radec_HSC.py">
+        <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+            <state relative-caret-position="801">
+              <caret line="64" column="31" lean-forward="true" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
               <folding>
-                <element signature="e#85#103#0" expanded="true" />
+                <element signature="e#173#204#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,13 +76,14 @@
         <option value="$PROJECT_DIR$/Match_radec_mag.py" />
         <option value="$PROJECT_DIR$/raerr_decerr.py" />
         <option value="$PROJECT_DIR$/ra_dec_distribution.py" />
-        <option value="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" />
         <option value="$PROJECT_DIR$/Match_radec.py" />
+        <option value="$PROJECT_DIR$/Match_radec_HSC.py" />
         <option value="$PROJECT_DIR$/Match_radec_S82.py" />
+        <option value="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="1417" />
@@ -179,20 +167,6 @@
       <workItem from="1558499143082" duration="889000" />
       <workItem from="1558584444958" duration="912000" />
       <workItem from="1558668364632" duration="32000" />
-    </task>
-    <task id="LOCAL-00007" summary="1">
-      <created>1556112905068</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1556112905068</updated>
-    </task>
-    <task id="LOCAL-00008" summary="2">
-      <created>1556116141863</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1556116141863</updated>
     </task>
     <task id="LOCAL-00009" summary="make it robust">
       <created>1556199339861</created>
@@ -523,17 +497,31 @@
       <option name="project" value="LOCAL" />
       <updated>1558675669130</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="rename Match_radec_5_23.py to Match_radec_HSC.py&#10;&#10;rm the old match script Match_radec.py&#10;create a new match script Match_radec_S82.py to match every S82 stars to HSC catalog. The mirror edition of the previous one.">
+      <created>1558941220643</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1558941220643</updated>
+    </task>
+    <task id="LOCAL-00057" summary="fix bugs">
+      <created>1558945194835</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1558945194835</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127406000" />
+    <option name="totallyTimeSpent" value="136862000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1211878" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.120462045" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -574,7 +562,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="make it robust" />
     <MESSAGE value="4th edition" />
     <MESSAGE value="fix arcsec bug" />
     <MESSAGE value="add astropy.coordinates to accelerate calculation" />
@@ -596,10 +583,11 @@
     <MESSAGE value="modified magerrmean-mag with pd." />
     <MESSAGE value="modified match_radec_mag.py with multiprocessing and free some memory during running" />
     <MESSAGE value="fix the problem that we cannot use the global variables in mp.Pool.map. We can only use return since the variables in the different processing is quite different." />
-    <MESSAGE value="fix bugs" />
     <MESSAGE value="new plot script of delta_ra vs delta_dec (not finished)&#10;&#10;modified the ra_dec_distribution.py with pandas" />
     <MESSAGE value="fix bugs and add the histgram dist of delta ra and dec" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs and add the histgram dist of delta ra and dec" />
+    <MESSAGE value="rename Match_radec_5_23.py to Match_radec_HSC.py&#10;&#10;rm the old match script Match_radec.py&#10;create a new match script Match_radec_S82.py to match every S82 stars to HSC catalog. The mirror edition of the previous one." />
+    <MESSAGE value="fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -666,28 +654,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mag_distribution.py" />
     <entry file="file://$PROJECT_DIR$/raerr_decerr.py" />
-    <entry file="file://$PROJECT_DIR$/ra_dec_distribution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec_mag.py" />
-    <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-          <folding>
-            <element signature="e#117#148#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec_S82.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4636">
-          <caret line="175" column="38" lean-forward="true" selection-start-line="175" selection-start-column="38" selection-end-line="175" selection-end-column="38" />
+        <state relative-caret-position="4617">
+          <caret line="171" column="51" lean-forward="true" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
           <folding>
             <element signature="e#85#103#0" expanded="true" />
           </folding>
@@ -696,10 +667,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Match_radec_HSC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        <state relative-caret-position="187">
+          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
           <folding>
             <element signature="e#85#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ra_dec_distribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="64" column="31" lean-forward="true" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+          <folding>
+            <element signature="e#173#204#0" expanded="true" />
           </folding>
         </state>
       </provider>
