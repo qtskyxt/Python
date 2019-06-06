@@ -1,5 +1,30 @@
 #find the overlap part of two catalogs
 
+#modified with pandas. June.6th 2019
+
+import pandas as pd
+
+pwd='/home/tian.qiu/data/catalog/6_6/'
+s=pd.read_csv(pwd+'S82_6_6.csv')
+h=pd.read_csv(pwd+'HSC_6_6.csv')
+
+sh=pd.DataFrame(columns=h.columns)
+ss=pd.DataFrame(columns=s.columns)
+
+for i in range(360):
+    th=h[(h.ra>i)&(h.ra<i+1)]
+    ts=s[(s.ra>i)&(s.ra<i+1)]
+    if th.empty or ts.empty:
+        continue
+    maxdec=min(max(th.dec),max(ts.dec))
+    mindec=max(min(th.dec),min(ts.dec))
+    sh=sh.append(th[(th.dec>=mindec)&(th.dec<=maxdec)])
+    ss=ss.append(ts[(ts.dec>=mindec)&(ts.dec<=maxdec)])
+
+sh.to_csv(pwd+'S82ol.csv')
+ss.to_csv(pwd+'HSCol.csv')
+
+'''
 import numpy as np
 
 pwd1='/home/tian.qiu/data/catalog/'
@@ -60,3 +85,4 @@ for i in range(len(S82l)):
         olS82.write(x)
 
 olS82.close()
+'''
