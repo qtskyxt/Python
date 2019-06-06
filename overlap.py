@@ -21,8 +21,8 @@ for i in range(360):
     sh=sh.append(th[(th.dec>=mindec)&(th.dec<=maxdec)])
     ss=ss.append(ts[(ts.dec>=mindec)&(ts.dec<=maxdec)])
 
-sh.to_csv(pwd+'S82ol.csv',index=False)
-ss.to_csv(pwd+'HSCol.csv',index=False)
+sh.to_csv(pwd+'HSCol.csv',index=False)
+ss.to_csv(pwd+'S82ol.csv',index=False)
 
 '''
 import numpy as np
