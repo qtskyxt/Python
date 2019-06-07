@@ -100,18 +100,21 @@ def putout(i):
 		n = 0
 		hra=HSCs[i].iloc[j].ra
 		hdec=HSCs[i].iloc[j].dec
-		matchlist = matchlist.append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCimag': HSCs[i].iloc[j].i_cmodel_mag,'HSCra': hra,'HSCdec' :hdec}, ignore_index=True)
+		matchlist = matchlist.append({'HSCindex': int(HSCs[i].iloc[j].name), 'HSCra': hra,'HSCdec' :hdec, 'HSCgmag': HSCs[i].iloc[j].g_cmodel_mag,'HSCrmag': HSCs[i].iloc[j].r_cmodel_mag,'HSCimag': HSCs[i].iloc[j].i_cmodel_mag,'HSCzmag': HSCs[i].iloc[j].z_cmodel_mag}, ignore_index=True)
 		for k in range(len(TF[i][j])):
 			if TF[i][j]!=[]:
 				n = n + 1
 				matchedS82 = matchedS82.append(S82s[i].iloc[TF[i][j][k]])
 				matchlist.loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[TF[i][j][k]].name)
-				matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].psfMag_i
 				sra=S82s[i].iloc[TF[i][j][k]].ra
 				sdec=S82s[i].iloc[TF[i][j][k]].dec
 				matchlist.loc[j, 'S82ra' + str(n)] = sra
 				matchlist.loc[j, 'S82dec' + str(n)] = sdec
 				matchlist.loc[j, 'S82sep' + str(n)] = SkyCoord(hra,hdec,unit='deg').separation(SkyCoord(sra,sdec,unit='deg')).arcsec
+				matchlist.loc[j, 'S82gmag' + str(n)] = S82s[i].iloc[TF[i][j][k]].psfMag_g
+				matchlist.loc[j, 'S82rmag' + str(n)] = S82s[i].iloc[TF[i][j][k]].psfMag_r
+				matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].psfMag_i
+				matchlist.loc[j, 'S82zmag' + str(n)] = S82s[i].iloc[TF[i][j][k]].psfMag_z
 		if n != 0:
 			matchedHSC = matchedHSC.append(HSCs[i].iloc[j])
 		else:
