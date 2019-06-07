@@ -106,7 +106,7 @@ def putout(i):
 				n = n + 1
 				matchedS82 = matchedS82.append(S82s[i].iloc[TF[i][j][k]])
 				matchlist.loc[j, 'matchedS82index' + str(n)] = int(S82s[i].iloc[TF[i][j][k]].name)
-				matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].iM
+				matchlist.loc[j, 'S82imag' + str(n)] = S82s[i].iloc[TF[i][j][k]].psfMag_i
 				sra=S82s[i].iloc[TF[i][j][k]].ra
 				sdec=S82s[i].iloc[TF[i][j][k]].dec
 				matchlist.loc[j, 'S82ra' + str(n)] = sra
