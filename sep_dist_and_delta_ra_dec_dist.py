@@ -10,8 +10,8 @@ from astropy.coordinates import SkyCoord
 import multiprocessing as mp
 
 
-pwd1='/home/tian.qiu/data/result/5_27/'
-pwd2='/home/tian.qiu/data/plot/5_30/'
+pwd1='/home/tian.qiu/data/result/6_6/'
+pwd2='/home/tian.qiu/data/plot/6_8/'
 
 ml=pd.read_csv(pwd1+'matchlist')
 #h=pd.read_csv(pwd1+'matchedHSC')
@@ -20,7 +20,7 @@ m=ml[ml.matchednum!=0]
 
 n=50
 
-Y=m.HSCsep1
+Y=m.S82sep1
 x=np.array(range(n+1))/n
 y=[]
 for i in range(n):
@@ -38,32 +38,32 @@ popt,pcov=curve_fit(func,x,y)
 
 plt.figure(figsize=(8,12))
 plt.subplot(211)
-plt.hist(m.HSCsep1,bins=n,color='red',histtype='step',label='distribution')
+plt.hist(m.S82sep1,bins=n,color='red',histtype='step',label='distribution')
 plt.plot(x,func(x,popt)/n*len(m),label=r'$\frac{1}{\sigma^2}exp(-\frac{-\theta^2}{2\sigma^2})\theta]$, $\sigma$=%1.5f'%(popt))
 plt.ylabel('N')
 plt.xlabel(r'$\theta$/arcsec')
 plt.title('separation distribution')
 plt.legend()
 plt.subplot(212)
-plt.hist(m.HSCsep1,bins=n,color='red',histtype='step',label='distribution')
+plt.hist(m.S82sep1,bins=n,color='red',histtype='step',label='distribution')
 plt.plot(x,func(x,popt)/n*len(m),label=r'$\frac{1}{\sigma^2}exp[-\frac{-\theta^2}{2\sigma^2}]\theta]$, $\sigma$=%1.5f'%(popt))
 plt.ylabel('N')
 plt.yscale('log')
 plt.axis([-0.01,1.01,1,1e5])
 plt.xlabel(r'$\theta$/arcsec')
-plt.savefig(pwd2+'sep_dist_5_30.png')
+plt.savefig(pwd2+'sep_dist.png')
 plt.close()
 
 #ms=m.sample(frac=0.005,axis=0)
-delta_ra=(m.HSCra1.values-m.S82ra.values)*3600
-delta_dec=(m.HSCdec1.values-m.S82dec.values)*3600
+delta_ra=(m.S82ra1.values-m.HSCra.values)*3600
+delta_dec=(m.S82dec1.values-m.HSCdec.values)*3600
 plt.figure()
 plt.title(r'$\delta_{dec}$ vs $\delta_{ra}$ distribution')
 plt.scatter(delta_ra,delta_dec,alpha=1,s=0.1)
 plt.xlabel(r'$\delta_{ra}/arcsec$')
 plt.ylabel(r'$\delta_{dec}/arcsec$')
 plt.axis([-1,1,-1,1])
-plt.savefig(pwd2+'delta_ra_dec_dist_5_30.png')
+plt.savefig(pwd2+'delta_ra_dec_dist.png')
 plt.close()
 
 plt.figure()
@@ -74,6 +74,6 @@ plt.ylabel('N')
 plt.yscale('log')
 plt.xlabel('separation/arcsec')
 plt.legend()
-plt.savefig(pwd2+'delta_dist_5_30.png')
+plt.savefig(pwd2+'delta_dist.png')
 plt.close()
 
