@@ -15,7 +15,7 @@ plt.figure(figsize=(8,6),dpi=300)
 plt.subplot(111)
 bins1=plt.hist(mHSC.i_cmodel_mag,bins=50,color='red',label='matchedHSC',histtype='step')[1]
 plt.hist(mS82.psfMag_i,bins=bins1,color='blue',label='matchedS82',histtype='step')
-plt.hist(umS82.psfMag_i,bins=bins1,color='orenge',label='unmatchedS82',histtype='step')
+plt.hist(umS82.psfMag_i,bins=bins1,color='orange',label='unmatchedS82',histtype='step')
 plt.hist(mS82.i_cmodel_mag,bins=bins1,color='yellow',label='unmatchedHSC',histtype='step')
 plt.hist(S82.psfMag_i,bins=bins1,color='black',label='allS82',histtype='step')
 plt.hist(HSC.i_cmodel_mag,bins=bins1,color='pink',label='allHSC',histtype='step')
