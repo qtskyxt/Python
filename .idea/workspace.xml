@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mag_dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/mag_dist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,29 +26,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-              <folding>
-                <element signature="e#173#204#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mag_dist.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -86,10 +64,10 @@
         <option value="$PROJECT_DIR$/ra_dec_distribution.py" />
         <option value="$PROJECT_DIR$/Match_radec.py" />
         <option value="$PROJECT_DIR$/Match_radec_S82.py" />
-        <option value="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" />
         <option value="$PROJECT_DIR$/overlap.py" />
         <option value="$PROJECT_DIR$/Match_radec_HSC.py" />
         <option value="$PROJECT_DIR$/mag_dist.py" />
+        <option value="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" />
       </list>
     </option>
   </component>
@@ -178,20 +156,6 @@
       <workItem from="1558499143082" duration="889000" />
       <workItem from="1558584444958" duration="912000" />
       <workItem from="1558668364632" duration="32000" />
-    </task>
-    <task id="LOCAL-00022" summary="fix bug">
-      <created>1557245483972</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1557245483972</updated>
-    </task>
-    <task id="LOCAL-00023" summary="plot modified">
-      <created>1557306435759</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1557306435759</updated>
     </task>
     <task id="LOCAL-00024" summary="fix bug">
       <created>1557307161701</created>
@@ -522,17 +486,30 @@
       <option name="project" value="LOCAL" />
       <updated>1560062101991</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="fix bugs">
+      <created>1560062197368</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1560062197368</updated>
+    </task>
+    <task id="LOCAL-00072" summary="fix bugs">
+      <created>1560062767616</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1560062767616</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147073000" />
+    <option name="totallyTimeSpent" value="147743000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16211878" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16211878" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -722,20 +699,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
+    <entry file="file://$PROJECT_DIR$/mag_dist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#173#204#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="648">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mag_dist.py">
+    <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="843">
+          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+          <folding>
+            <element signature="e#173#204#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

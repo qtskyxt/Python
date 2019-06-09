@@ -55,8 +55,8 @@ plt.savefig(pwd2+'sep_dist.png')
 plt.close()
 
 #ms=m.sample(frac=0.005,axis=0)
-delta_ra=(m.S82ra1.values-m.HSCra.values)*3600
-delta_dec=(m.S82dec1.values-m.HSCdec.values)*3600
+delta_ra=(m.HSCra.values-m.S82ra1.values)*3600
+delta_dec=(m.HSCdec.values-m.S82dec1.values)*3600
 plt.figure()
 plt.title(r'$\delta_{dec}$ vs $\delta_{ra}$ distribution')
 plt.scatter(delta_ra,delta_dec,alpha=1,s=0.1)
