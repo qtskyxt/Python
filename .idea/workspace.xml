@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="594126c4-c13a-49d5-a5fa-f5073903e711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +37,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>HSC</find>
+      <find>S82</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -59,20 +59,19 @@
         <option value="$PROJECT_DIR$/listunmatch.py" />
         <option value="$PROJECT_DIR$/magerrmean-mag.py" />
         <option value="$PROJECT_DIR$/mag_distribution.py" />
+        <option value="$PROJECT_DIR$/overlap.py" />
         <option value="$PROJECT_DIR$/Match_radec_mag.py" />
         <option value="$PROJECT_DIR$/raerr_decerr.py" />
         <option value="$PROJECT_DIR$/ra_dec_distribution.py" />
         <option value="$PROJECT_DIR$/Match_radec.py" />
-        <option value="$PROJECT_DIR$/Match_radec_S82.py" />
-        <option value="$PROJECT_DIR$/overlap.py" />
         <option value="$PROJECT_DIR$/Match_radec_HSC.py" />
-        <option value="$PROJECT_DIR$/mag_dist.py" />
+        <option value="$PROJECT_DIR$/Match_radec_S82.py" />
         <option value="$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py" />
+        <option value="$PROJECT_DIR$/mag_dist.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1280" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="1417" />
@@ -85,7 +84,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -97,6 +95,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -156,6 +155,76 @@
       <workItem from="1558499143082" duration="889000" />
       <workItem from="1558584444958" duration="912000" />
       <workItem from="1558668364632" duration="32000" />
+    </task>
+    <task id="LOCAL-00014" summary="fix bugs">
+      <created>1557235536125</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1557235536125</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix bugs">
+      <created>1557235578281</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1557235578281</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix bugs">
+      <created>1557238481877</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1557238481877</updated>
+    </task>
+    <task id="LOCAL-00017" summary="mag distribution">
+      <created>1557241801201</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1557241801201</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ra_dec dist">
+      <created>1557244694895</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1557244694895</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix bug">
+      <created>1557244831498</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1557244831498</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix bug">
+      <created>1557244938050</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1557244938050</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix bug">
+      <created>1557245292602</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1557245292602</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fix bug">
+      <created>1557245483972</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1557245483972</updated>
+    </task>
+    <task id="LOCAL-00023" summary="plot modified">
+      <created>1557306435759</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1557306435759</updated>
     </task>
     <task id="LOCAL-00024" summary="fix bug">
       <created>1557307161701</created>
@@ -423,93 +492,23 @@
       <option name="project" value="LOCAL" />
       <updated>1559203585141</updated>
     </task>
-    <task id="LOCAL-00062" summary="modified overlap.py with pandas">
-      <created>1559809888264</created>
+    <task id="LOCAL-00062" summary="fix bugs and change to match every HSC star to S82">
+      <created>1559984143107</created>
       <option name="number" value="00062" />
       <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
-      <updated>1559809888264</updated>
+      <updated>1559984143107</updated>
     </task>
-    <task id="LOCAL-00063" summary="fix bugs">
-      <created>1559879264396</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1559879264396</updated>
-    </task>
-    <task id="LOCAL-00064" summary="add griz mag in matchlist">
-      <created>1559881143641</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1559881143641</updated>
-    </task>
-    <task id="LOCAL-00065" summary="modified mag_dist.py to plot step for all and matched and unmatched HSC and S82 numbers.">
-      <created>1560061358455</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1560061358455</updated>
-    </task>
-    <task id="LOCAL-00066" summary="fix bugs">
-      <created>1560061677224</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1560061677224</updated>
-    </task>
-    <task id="LOCAL-00067" summary="fix bugs">
-      <created>1560061756756</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1560061756756</updated>
-    </task>
-    <task id="LOCAL-00068" summary="fix bugs">
-      <created>1560061958485</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1560061958485</updated>
-    </task>
-    <task id="LOCAL-00069" summary="fix bugs">
-      <created>1560061968359</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1560061968359</updated>
-    </task>
-    <task id="LOCAL-00070" summary="fix bugs">
-      <created>1560062101991</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1560062101991</updated>
-    </task>
-    <task id="LOCAL-00071" summary="fix bugs">
-      <created>1560062197368</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1560062197368</updated>
-    </task>
-    <task id="LOCAL-00072" summary="fix bugs">
-      <created>1560062767616</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1560062767616</updated>
-    </task>
-    <option name="localTasksCounter" value="73" />
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147743000" />
+    <option name="totallyTimeSpent" value="142846000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="877" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16211878" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17770597" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -526,15 +525,42 @@
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299373" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32943925" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="right" x="0" y="0" width="270" height="1217" id="Documentation" order="0" sideWeight="0.5007788" side_tool="true" weight="0.32945424" />
+      <window_info anchor="right" x="0" y="0" width="270" height="1217" id="Documentation" order="0" side_tool="true" weight="0.3282504" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.49922118" weight="0.32945424" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.3297568" />
       <window_info anchor="right" id="R Graphics" order="5" />
       <window_info anchor="right" id="R Packages" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.32920793" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13812602" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32866043" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32866043" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299373" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32943925" />
+      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="right" x="0" y="0" width="270" height="1217" id="Documentation" order="0" side_tool="true" weight="0.3282504" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.3297568" />
+      <window_info anchor="right" id="R Graphics" order="5" />
+      <window_info anchor="right" id="R Packages" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32920793" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -549,33 +575,9 @@
       </list>
     </option>
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="add astropy.coordinates to accelerate calculation" />
+    <MESSAGE value="test for the cut off" />
     <MESSAGE value="mag distribution" />
     <MESSAGE value="ra_dec dist" />
     <MESSAGE value="plot modified" />
@@ -597,11 +599,9 @@
     <MESSAGE value="fix bugs and add the histgram dist of delta ra and dec" />
     <MESSAGE value="rename Match_radec_5_23.py to Match_radec_HSC.py&#10;&#10;rm the old match script Match_radec.py&#10;create a new match script Match_radec_S82.py to match every S82 stars to HSC catalog. The mirror edition of the previous one." />
     <MESSAGE value="modified sep_dist_and_delta_ra_dec_dist.py&#10;add the fitting for the sep dist" />
-    <MESSAGE value="modified overlap.py with pandas" />
-    <MESSAGE value="add griz mag in matchlist" />
-    <MESSAGE value="modified mag_dist.py to plot step for all and matched and unmatched HSC and S82 numbers." />
     <MESSAGE value="fix bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
+    <MESSAGE value="fix bugs and change to match every HSC star to S82" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs and change to match every HSC star to S82" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -632,9 +632,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cut.py" />
     <entry file="file://$PROJECT_DIR$/listunmatch.py" />
+    <entry file="file://$PROJECT_DIR$/overlap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mag_distribution.py" />
+    <entry file="file://$PROJECT_DIR$/raerr_decerr.py" />
+    <entry file="file://$PROJECT_DIR$/Match_radec_mag.py" />
+    <entry file="file://$PROJECT_DIR$/Match_radec_S82.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4617">
+          <caret line="171" column="51" lean-forward="true" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
+          <folding>
+            <element signature="e#85#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Match_radec_HSC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="e#85#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ra_dec_distribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <element signature="e#173#204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/magerr-mag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-616">
+        <state relative-caret-position="27">
           <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
         </state>
       </provider>
@@ -651,68 +698,14 @@
     <entry file="file://$PROJECT_DIR$/magerrmean-mag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#199#430#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mag_distribution.py" />
-    <entry file="file://$PROJECT_DIR$/raerr_decerr.py" />
-    <entry file="file://$PROJECT_DIR$/Match_radec_mag.py" />
-    <entry file="file://$PROJECT_DIR$/ra_dec_distribution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#28#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/overlap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Match_radec_S82.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="911">
-          <caret line="113" column="131" selection-start-line="113" selection-start-column="131" selection-end-line="113" selection-end-column="131" />
-          <folding>
-            <element signature="e#85#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Match_radec_HSC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="116" column="88" selection-start-line="116" selection-start-column="88" selection-end-line="116" selection-end-column="88" />
-          <folding>
-            <element signature="e#85#103#0" expanded="true" />
-          </folding>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mag_dist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sep_dist_and_delta_ra_dec_dist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="843">
-          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
-          <folding>
-            <element signature="e#173#204#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="243">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
         </state>
       </provider>
     </entry>

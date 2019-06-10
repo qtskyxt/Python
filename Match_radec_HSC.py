@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from astropy.coordinates import SkyCoord  #利用 astropy内置函数加快计算
 import multiprocessing as mp
-
+import gc
 
 pwd1='/home/tian.qiu/data/catalog/'
 pwd2='/home/tian.qiu/data/result/'
@@ -33,6 +33,11 @@ S82s=[[] for i in range(360)]
 for i in range(360):
 	HSCs[i]=HSC[(HSC.ra>=i)&(HSC.ra<i+1)]
 	S82s[i]=S82[(S82.ra>=i)&(S82.ra<i+1)]
+
+del HSC
+del S82
+gc.collect()
+
 '''
 def sep_s2m(Ara,Adec,Bras,Bdecs):
 	s=SkyCoord(Ara,Adec,unit='deg')
@@ -66,10 +71,10 @@ def dis(i,j,k,m):
 
 #创建记录文件，记录匹配的总数和编号，at the meanwhile, output the unmatched list and the matched list both in HSC and S82
 #match=open(pwd2+'match1s_aspy_mag.txt','w')
-matchedHSC=[pd.DataFrame(columns=HSC.columns) for i in range(360)]
-matchedS82=[pd.DataFrame(columns=S82.columns) for i in range(360)]
-unmatchedHSC=[pd.DataFrame(columns=HSC.columns) for i in range(360)]
-unmatchedS82=[pd.DataFrame(columns=S82.columns) for i in range(360)]
+matchedHSC=[pd.DataFrame(columns=HSCs[0].columns) for i in range(360)]
+matchedS82=[pd.DataFrame(columns=S82s[0].columns) for i in range(360)]
+unmatchedHSC=[pd.DataFrame(columns=HSCs[0].columns) for i in range(360)]
+unmatchedS82=[pd.DataFrame(columns=S82s[0].columns) for i in range(360)]
 matchlist=[pd.DataFrame(columns=['HSCindex','HSCimag','matchednum']) for i in range(360)]
 TF=[[] for i in range(360)]
 
@@ -92,9 +97,9 @@ def calculate(i):
 
 def putout(i):
 	print(i,'wb',flush=True)
-	matchedHSC = pd.DataFrame(columns=HSC.columns)
-	matchedS82 = pd.DataFrame(columns=S82.columns)
-	unmatchedHSC = pd.DataFrame(columns=HSC.columns)
+	matchedHSC = pd.DataFrame(columns=HSCs[0].columns)
+	matchedS82 = pd.DataFrame(columns=S82s[0].columns)
+	unmatchedHSC = pd.DataFrame(columns=HSCs[0].columns)
 	matchlist = pd.DataFrame(columns=['HSCindex', 'HSCimag', 'HSCra','HSCdec','matchednum'])
 	for j in range(len(TF[i])):
 		n = 0
