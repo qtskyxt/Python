@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 from astropy.coordinates import SkyCoord  #利用 astropy内置函数加快计算
 import multiprocessing as mp
-import gc
 
 pwd1='/home/tian.qiu/data/catalog/'
 pwd2='/home/tian.qiu/data/result/'
@@ -34,9 +33,6 @@ for i in range(360):
 	HSCs[i]=HSC[(HSC.ra>=i)&(HSC.ra<i+1)]
 	S82s[i]=S82[(S82.ra>=i)&(S82.ra<i+1)]
 
-del HSC
-del S82
-gc.collect()
 
 '''
 def sep_s2m(Ara,Adec,Bras,Bdecs):
@@ -177,11 +173,11 @@ ms=pd.concat([matchedS82[i] for i in h],sort=False)
 ms=ms.drop_duplicates()
 ums=(S82.append(ms)).drop_duplicates(keep=False)
 
-mh.to_csv(pwd2+'matchedHSC',index_label='HSCindex')
-ms.to_csv(pwd2+'matchedS82',index_label='S82index')
-umh.to_csv(pwd2+'unmatchedHSC',index_label='HSCindex')
-ums.to_csv(pwd2+'unmatchedS82',index_label='S82index')
-m.to_csv(pwd2+'matchlist',index=False)
+mh.to_csv(pwd2+'matchedHSC.csv',index_label='HSCindex')
+ms.to_csv(pwd2+'matchedS82.csv',index_label='S82index')
+umh.to_csv(pwd2+'unmatchedHSC.csv',index_label='HSCindex')
+ums.to_csv(pwd2+'unmatchedS82.csv',index_label='S82index')
+m.to_csv(pwd2+'matchlist.csv',index=False)
 
 
 
